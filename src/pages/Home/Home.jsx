@@ -1,67 +1,92 @@
+import { useEffect, useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2026-08-08T00:00:00");
+    const now = new Date();
+    const diff = targetDate - now;
+
+    return {
+      days: diff > 0 ? Math.floor(diff / (1000 * 60 * 60 * 24)) : 0,
+      hours: diff > 0 ? Math.floor((diff / (1000 * 60 * 60)) % 24) : 0,
+      minutes: diff > 0 ? Math.floor((diff / 1000 / 60) % 60) : 0,
+      seconds: diff > 0 ? Math.floor((diff / 1000) % 60) : 0,
+    };
+  };
+
+  const [time, setTime] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="home-container">
-      
       <div className="title-box">
-        <h2>Information For Home</h2>
+
+        <div className="conference-box">
+          <p className="top-text">
+            International Conference on Advancements in Smart, Secure and Intelligent Computing
+          </p>
+
+          <p className="sub-text">
+            KIIT-DU Campus, Bhubaneswar, India
+          </p>
+
+          <h1 className="main-title">ASSIC 2026</h1>
+
+          <div className="divider"></div>
+
+          <h2 className="university">KIIT UNIVERSITY</h2>
+          <p className="country">India</p>
+
+          <button className="mode-btn">HYBRID MODE</button>
+
+          <div className="info-row">
+            <div>
+              <p className="label">WHEN</p>
+              <p className="value">08<sup>th</sup> – 10<sup>th</sup> Aug, 2026</p>
+            </div>
+
+            <div>
+              <p className="label">WHERE</p>
+              <p className="value">Bhubaneswar, India</p>
+            </div>
+
+            <div>
+              <p className="label">HOSTED BY</p>
+              <p className="value">KIIT University</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="timer-box">
+          <div className="time-item">
+            <h1>{time.days}</h1>
+            <span>Days</span>
+          </div>
+
+          <div className="time-item">
+            <h1>{time.hours}</h1>
+            <span>Hours</span>
+          </div>
+
+          <div className="time-item">
+            <h1>{time.minutes}</h1>
+            <span>Minutes</span>
+          </div>
+
+          <div className="time-item">
+            <h1>{time.seconds}</h1>
+            <span>Seconds</span>
+          </div>
+        </div>
+
       </div>
-
-      <div className="content">
-        <h3>Submission Policies</h3>
-        <p>
-          The authors of ASSIC 2026 should pay attention to the following:
-        </p>
-
-        <ul>
-          <li>
-            Original, previously unpublished papers, and not simultaneously submitted
-            to another journal or conference, with scientific and technical
-            contributions, are expected.
-          </li>
-
-          <li>
-            All submitted papers will be checked for plagiarism through the IEEE
-            CrossCheck system or Turnitin software.
-          </li>
-
-          <li>
-            Papers must be written in English with a maximum paper length of six (6)
-            printed pages including figures for regular papers.
-          </li>
-
-          <li>
-            Papers have to be formatted in IEEE template:
-            <br />
-            WORD: <a href="#">http://www.ieee.info/IEEE_template.docx</a>
-            <br />
-            LATEX: <a href="#">http://www.ieee.info/IEEE_latex.zip</a>
-          </li>
-        </ul>
-
-        <h3>Paper Submission</h3>
-        <p>
-          Upload your paper <a href="#">here</a>
-        </p>
-
-        <h3>Camera-Ready Submission</h3>
-        <p>
-          Upon acceptance, at least one of the authors listed in the paper must
-          attend the conference and present the paper.
-        </p>
-
-        <p>
-          At least one author must register for ASSIC 2026 to upload the final
-          manuscript.
-        </p>
-
-        <p>
-          Only papers corrected according to reviewers' suggestions will be
-          included in the final proceedings.
-        </p>
-      </div>
-
     </div>
   );
 }

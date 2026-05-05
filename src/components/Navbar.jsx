@@ -5,12 +5,13 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <header className="header">
-      <div className="logo-section">
+      
+
+      <nav className="nav">
+        <div className="logo-section">
         <img src="/logo1.png" alt="SSIC" className="logo" />
         <img src="/logo2.png" alt="KIIT" className="logo" />
       </div>
-
-      <nav className="nav">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/committees">Committees</Link></li>
