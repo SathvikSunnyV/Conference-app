@@ -1,0 +1,26 @@
+.contact-container {
+  background: #cfd6df;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-box {
+  display: flex;
+  gap: 100px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item h2 {
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 24px;
+  margin: 5px 0;
+}

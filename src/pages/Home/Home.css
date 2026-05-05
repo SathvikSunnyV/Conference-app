@@ -1,0 +1,47 @@
+/* Authors.css */
+
+.home-container {
+  background: #cfd6df;
+  min-height: 80vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-box {
+  background: #eaeaea;
+  padding: 10px 20px;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.title-box h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.content {
+  max-width: 800px;
+  color: #222;
+  line-height: 1.6;
+}
+
+.content h3 {
+  color: #2c3e8f;
+  margin-top: 20px;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.content a {
+  color: blue;
+  text-decoration: none;
+}

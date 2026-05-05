@@ -1,0 +1,58 @@
+/* Committees.css */
+
+.committees-container {
+  background: #d9dde3;
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  display: inline-block;
+  background: #eaeaea;
+  padding: 5px 12px;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  font-weight: bold;
+  color: #2c3e8f;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 5px;
+  list-style: "▶ ";
+}
+
+.full-section {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.full-section h4 {
+  margin-top: 15px;
+  color: #2c3e8f;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.members-grid ul {
+  padding-left: 20px;
+}

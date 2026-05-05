@@ -1,0 +1,64 @@
+.registration-container {
+  background: #cfd6df;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.section h2 {
+  text-align: center;
+  color: #2c3e8f;
+}
+
+.section h3 {
+  text-align: center;
+}
+
+/* LIST */
+.bullet {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.bullet li {
+  margin-bottom: 10px;
+}
+
+/* TABLE */
+.fee-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.fee-table th {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.fee-table td {
+  border: 1px solid #999;
+  padding: 10px;
+}
+
+/* BANK */
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bank-table td {
+  border: 1px solid #999;
+  padding: 10px;
+}
