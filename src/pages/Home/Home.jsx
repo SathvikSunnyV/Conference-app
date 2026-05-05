@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
-
+import kiit from "../../assets/kiit.png";
+import salford from "../../assets/salford.png";
+import bu from "../../assets/british-university.png";
+import ieeeapu from "../../assets/ieee-apu.png";
+import ieee from "../../assets/ieee.png";
 function Home() {
   const calculateTimeLeft = () => {
     const targetDate = new Date("2026-08-08T00:00:00");
@@ -85,7 +89,46 @@ function Home() {
             <span>Seconds</span>
           </div>
         </div>
+        <div className="partners-section">
+          <div className="partners-grid">
+            <div className="partner-card sponsor-card">
+              <img src={ieee} alt="IEEE Sponsors" className="sponsor-image" />
+            </div>
 
+            <div className="partner-card association-card">
+              <h2 className="section-heading">In Association with</h2>
+
+              <div className="assoc-stack">
+                <img src={salford} alt="University of Salford" className="assoc-logo assoc-logo-top" />
+                <img src={bu} alt="British University in Dubai" className="assoc-logo assoc-logo-mid" />
+                <img src={ieeeapu} alt="IEEE APU Student Branch" className="assoc-logo assoc-logo-bottom" />
+              </div>
+
+              <p className="association-text">
+                (Asia Pacific University IEEE Student Branch, MALAYSIA)
+              </p>
+
+              <a
+                href="https://cmt3.research.microsoft.com/ASSIC2026/Submission/Index"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="callpapers-link"
+              >
+                Call For Papers
+              </a>
+            </div>
+
+            <div className="partner-card hosted-card">
+              <h2 className="section-heading hosted-heading">Hosted By</h2>
+
+              <div className="host-wrap">
+                <img src={kiit} alt="KIIT University" className="host-image" />
+                <div className="kiit-pill">KIIT University</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
   );

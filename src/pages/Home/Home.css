@@ -18,15 +18,17 @@
 .conference-box {
   width: 65%;
   max-width: 650px;
-  padding: 50px 40px 60px ;
-  border-radius: 18px;
+  padding: 50px 40px 60px;
+  border-radius: 20px;
   height: 65vh;
   max-height: 500px;
 
   text-align: center;
-
-  background: linear-gradient(135deg, #312e81, #4338ca);
   color: white;
+
+  background: linear-gradient(135deg, #312e81, #4338ca, #6366f1);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
 
   box-shadow: 
     0 25px 60px rgba(49, 46, 129, 0.35),
@@ -80,6 +82,8 @@
 .university {
   font-size: 22px;
   font-weight: 600;
+  color: #4338ca;
+  background-color: red;   
 }
 
 .country {
@@ -196,3 +200,182 @@
     display: none;
   }
 }
+
+.partners-section {
+  background: #dfeaf3;
+  padding: 40px 20px 70px;
+}
+
+.partners-grid {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1.1fr 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.partner-card {
+  min-height: 420px;
+}
+
+.sponsor-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sponsor-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+}
+
+.association-card {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.section-heading {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #1f2937;
+}
+
+.assoc-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.assoc-logo {
+  background: white;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.assoc-logo-top {
+  width: 250px;
+  height: auto;
+}
+
+.assoc-logo-mid {
+  width: 320px;
+  height: auto;
+}
+
+.assoc-logo-bottom {
+  width: 250px;
+  height: auto;
+}
+
+.association-text {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.callpapers-link {
+  display: inline-block;
+  margin-top: 28px;
+  background: #ff5a00;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  padding: 14px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.callpapers-link:hover {
+  transform: translateY(-2px);
+  background: #e84f00;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+.hosted-card {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.hosted-heading {
+  margin-bottom: 18px;
+}
+
+.host-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.host-image {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  background: white;
+  padding: 8px;
+  object-fit: contain;
+}
+
+.kiit-pill {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(31, 41, 55, 0.18);
+  color: #1f2937;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1100px) {
+  .partners-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .partner-card {
+    width: 100%;
+    max-width: 700px;
+    min-height: auto;
+  }
+
+  .association-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 22px;
+  }
+
+  .assoc-logo-top,
+  .assoc-logo-bottom {
+    width: 220px;
+  }
+
+  .assoc-logo-mid,
+  .host-image {
+    width: 260px;
+  }
+
+  .callpapers-link {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+}
+

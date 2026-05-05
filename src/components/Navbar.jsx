@@ -1,6 +1,7 @@
 // Navbar.jsx
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
@@ -9,8 +10,8 @@ function Navbar() {
 
       <nav className="nav">
         <div className="logo-section">
-        <img src="/logo1.png" alt="SSIC" className="logo" />
-        <img src="/logo2.png" alt="KIIT" className="logo" />
+        <img src={logo} alt="SSIC" className="logo" height={45} />
+        {/* <img src="/logo2.png" alt="KIIT" className="logo" /> */}
       </div>
         <ul>
           <li><Link to="/">Home</Link></li>
