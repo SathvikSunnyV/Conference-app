@@ -126,7 +126,84 @@ function Home() {
                 <div className="kiit-pill">KIIT University</div>
               </div>
             </div>
-            
+
+          </div>
+          <div className="feature-section">
+            <div className="feature-grid">
+              <div className="feature-card side-card">
+                <div className="feature-head">Speakers details of ASSIC 2026</div>
+                <div className="marquee-viewport">
+                  <div className="marquee-track">
+                    <div className="media-item">
+                      <img src={ieeeapu} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Dr. Sivaramakrishnan R</strong>
+                        <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={ieeeapu} alt="Speaker duplicate" />
+                      <div className="media-caption">
+                        <strong>Dr. Sivaramakrishnan R</strong>
+                        <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="welcome-panel">
+                <div className="welcome-badge">Welcome</div>
+                <p>
+                  <strong>Advancements in Smart, Secure and Intelligent Computing (ASSIC)</strong> aims to highlight recent development research works in Information and Communication Technologies so as to create intelligent systems driven by automation capabilities thereby addressing prevailing concerns faced by humanity. It aims to integrate the capabilities of computer units, social media, security methods and communication networks together with smart devices, internet technologies, big data analytics, computational intelligence and intelligent systems to realize various innovative applications. ASSIC can provide a platform in not only designing smart computing systems but also in incorporating machine intelligence based hi-tech system models with advanced security measures. It provides a premier interdisciplinary platform for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in modern technologies like Internet-of-Things, edge computing, cloud computing, secure intelligent frameworks and ubiquitous computing.
+                </p>
+              </div>
+
+              <div className="feature-card side-card">
+                <div className="feature-head">Glimpse of previous editions of conference</div>
+                <div className="marquee-viewport">
+                  <div className="marquee-track">
+                    <div className="media-item">
+                      <img src={ieee} alt="Conference glimpse" />
+                    </div>
+                    <div className="media-item">
+                      <img src={ieee} alt="Conference glimpse duplicate" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="highlight-section">
+                <div className="highlight-grid">
+                  <div className="highlight-card">
+                    <img src="/kiit-campus.jpg" alt="KIIT Campus" />
+                    <div className="highlight-body">
+                      <h3>Kalinga Institute Of Industrial Technology(KIIT)</h3>
+                      <p>Deemed to be University</p>
+                    </div>
+                  </div>
+
+                  <div className="highlight-card">
+                    <img src="/kiss-campus.jpg" alt="KISS Campus" />
+                    <div className="highlight-body">
+                      <h3>Kalinga Institute Of Social Sciences (KISS)</h3>
+                      <p>A home for 30,000 indigenous children</p>
+                    </div>
+                  </div>
+
+                  <div className="highlight-card">
+                    <img src="/achyuta-samanta.jpg" alt="Achyuta Samanta" />
+                    <div className="highlight-body">
+                      <h3>Achyuta Samanta</h3>
+                      <p>Founder , KIIT & KISS</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="cmt-note">
+                  The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                </p>
+              </div>
           </div>
         </div>
       </div>
