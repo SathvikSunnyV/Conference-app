@@ -5,6 +5,7 @@ import salford from "../../assets/salford.png";
 import bu from "../../assets/british-university.png";
 import ieeeapu from "../../assets/ieee-apu.png";
 import ieee from "../../assets/ieee.png";
+
 function Home() {
   const calculateTimeLeft = () => {
     const targetDate = new Date("2026-08-08T00:00:00");
@@ -32,63 +33,69 @@ function Home() {
     <div className="home-container">
       <div className="title-box">
 
-        <div className="conference-box">
-          <p className="top-text">
-            International Conference on Advancements in Smart, Secure and Intelligent Computing
-          </p>
+        {/* HERO SECTION with background image */}
+        <div className="hero-section">
+          <div className="conference-box">
+            <p className="top-text">
+              International Conference on Advancements in Smart, Secure and Intelligent Computing
+            </p>
 
-          <p className="sub-text">
-            KIIT-DU Campus, Bhubaneswar, India
-          </p>
+            <p className="sub-text">
+              KIIT-DU Campus, Bhubaneswar, India
+            </p>
 
-          <h1 className="main-title">ASSIC 2026</h1>
+            <h1 className="main-title">ASSIC 2026</h1>
 
-          <div className="divider"></div>
+            <div className="divider"></div>
 
-          <h2 className="university">KIIT UNIVERSITY</h2>
-          <p className="country">India</p>
+            <h2 className="university">KIIT UNIVERSITY</h2>
+            <p className="country">India</p>
 
-          <button className="mode-btn">HYBRID MODE</button>
+            <button className="mode-btn">HYBRID MODE</button>
 
-          <div className="info-row">
-            <div>
-              <p className="label">WHEN</p>
-              <p className="value">08<sup>th</sup> – 10<sup>th</sup> Aug, 2026</p>
+            <div className="info-row">
+              <div>
+                <p className="label">WHEN</p>
+                <p className="value">08<sup>th</sup> – 10<sup>th</sup> Aug, 2026</p>
+              </div>
+
+              <div>
+                <p className="label">WHERE</p>
+                <p className="value">Bhubaneswar, India</p>
+              </div>
+
+              <div>
+                <p className="label">HOSTED BY</p>
+                <p className="value">KIIT University</p>
+              </div>
+            </div>
+          </div>
+
+          {/* TIMER — sits right below the card, still inside hero bg */}
+          <div className="timer-box">
+            <div className="time-item">
+              <h1>{time.days}</h1>
+              <span>Days</span>
             </div>
 
-            <div>
-              <p className="label">WHERE</p>
-              <p className="value">Bhubaneswar, India</p>
+            <div className="time-item">
+              <h1>{time.hours}</h1>
+              <span>Hours</span>
             </div>
 
-            <div>
-              <p className="label">HOSTED BY</p>
-              <p className="value">KIIT University</p>
+            <div className="time-item">
+              <h1>{time.minutes}</h1>
+              <span>Minutes</span>
+            </div>
+
+            <div className="time-item">
+              <h1>{time.seconds}</h1>
+              <span>Seconds</span>
             </div>
           </div>
         </div>
 
-        <div className="timer-box">
-          <div className="time-item">
-            <h1>{time.days}</h1>
-            <span>Days</span>
-          </div>
-
-          <div className="time-item">
-            <h1>{time.hours}</h1>
-            <span>Hours</span>
-          </div>
-
-          <div className="time-item">
-            <h1>{time.minutes}</h1>
-            <span>Minutes</span>
-          </div>
-
-          <div className="time-item">
-            <h1>{time.seconds}</h1>
-            <span>Seconds</span>
-          </div>
-        </div>
+        {/* PARTNERS SECTION */}
         <div className="partners-section">
           <div className="partners-grid">
             <div className="partner-card sponsor-card">
@@ -126,8 +133,9 @@ function Home() {
                 <div className="kiit-pill">KIIT University</div>
               </div>
             </div>
-
           </div>
+
+          {/* FEATURE SECTION */}
           <div className="feature-section">
             <div className="feature-grid">
               <div className="feature-card side-card">
@@ -173,39 +181,42 @@ function Home() {
                 </div>
               </div>
             </div>
+
+            {/* HIGHLIGHT SECTION */}
             <div className="highlight-section">
-                <div className="highlight-grid">
-                  <div className="highlight-card">
-                    <img src="/kiit-campus.jpg" alt="KIIT Campus" />
-                    <div className="highlight-body">
-                      <h3>Kalinga Institute Of Industrial Technology(KIIT)</h3>
-                      <p>Deemed to be University</p>
-                    </div>
-                  </div>
-
-                  <div className="highlight-card">
-                    <img src="/kiss-campus.jpg" alt="KISS Campus" />
-                    <div className="highlight-body">
-                      <h3>Kalinga Institute Of Social Sciences (KISS)</h3>
-                      <p>A home for 30,000 indigenous children</p>
-                    </div>
-                  </div>
-
-                  <div className="highlight-card">
-                    <img src="/achyuta-samanta.jpg" alt="Achyuta Samanta" />
-                    <div className="highlight-body">
-                      <h3>Achyuta Samanta</h3>
-                      <p>Founder , KIIT & KISS</p>
-                    </div>
+              <div className="highlight-grid">
+                <div className="highlight-card">
+                  <img src="/kiit-campus.jpg" alt="KIIT Campus" />
+                  <div className="highlight-body">
+                    <h3>Kalinga Institute Of Industrial Technology (KIIT)</h3>
+                    <p>Deemed to be University</p>
                   </div>
                 </div>
 
-                <p className="cmt-note">
-                  The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
-                </p>
+                <div className="highlight-card">
+                  <img src="/kiss-campus.jpg" alt="KISS Campus" />
+                  <div className="highlight-body">
+                    <h3>Kalinga Institute Of Social Sciences (KISS)</h3>
+                    <p>A home for 30,000 indigenous children</p>
+                  </div>
+                </div>
+
+                <div className="highlight-card">
+                  <img src="/achyuta-samanta.jpg" alt="Achyuta Samanta" />
+                  <div className="highlight-body">
+                    <h3>Achyuta Samanta</h3>
+                    <p>Founder, KIIT &amp; KISS</p>
+                  </div>
+                </div>
               </div>
+
+              <p className="cmt-note">
+                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+              </p>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );
