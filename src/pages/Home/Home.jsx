@@ -44,7 +44,7 @@ function Home() {
               KIIT-DU Campus, Bhubaneswar, India
             </p>
 
-            <h1 className="main-title">ASSIC 2026</h1>
+            <h1 className="main-title" style={{color: 'white'}}>ASSIC 2026</h1>
 
             <div className="divider"></div>
 
