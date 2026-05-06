@@ -1,7 +1,5 @@
-/* Keynote.css */
-
 .simple-page {
-  background: #cfd6df;
+  background: #dbe6f0;
   min-height: 80vh;
   padding: 60px 20px;
   text-align: center;
@@ -13,7 +11,7 @@
 
 .title-box h2 {
   display: inline-block;
-  background: #eaeaea;
+  background: rgb(232, 237, 239);
   padding: 8px 20px;
   border: 1px solid #999;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -22,4 +20,5 @@
 .placeholder {
   font-size: 32px;
   color: #333;
+  font-weight: bold;
 }
