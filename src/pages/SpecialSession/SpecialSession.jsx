@@ -73,7 +73,7 @@ Asia Pacific University of Technology & Innovation, Malaysia"
             email="muhd_ehsanrana@apu.edu.my"
           />
 
-          <div className="divider"></div>
+          <div className="dividerss"></div>
 
           <PersonCard
             image={hameed}
