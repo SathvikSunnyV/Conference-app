@@ -1,76 +1,279 @@
-.cfp-container {
-  background: #cfd6df;
-  padding: 40px 20px;
-  min-height: 80vh;
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+.cfp-page {
+  min-height: 100vh;
+  padding: 28px 20px 80px;
+  background: #dbe6f0;
+  font-family: "Times New Roman", serif;
+  color: #1f1f1f;
 }
 
-.title-box {
+.page-title-wrap {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
-.title-box h2 {
+.page-title {
   display: inline-block;
-  background: #eaeaea;
-  padding: 8px 20px;
-  border: 1px solid #999;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  padding: 3px 13px 4px;
+  border: 1px solid #bdbdbd;
+  background: linear-gradient(to bottom, #fbfbfb, #e8e8e8);
+  color: #34409d;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 700;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1;
 }
 
-.intro {
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-}
-
-.card-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 30px 0;
-}
-
-.info-card {
-  background: #eaeaea;
-  padding: 15px;
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #5a5a8a;
-}
-
-.arrow-btn {
-  background: #2c3e8f;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.description {
-  max-width: 900px;
-  margin: 20px auto;
+.cfp-intro {
+  max-width: 980px;
+  margin: 0 auto 22px;
+  font-size: 20px;
+  line-height: 1.35;
   text-align: justify;
+  word-spacing: 2px;
 }
 
-.track {
-  max-width: 900px;
-  margin: 30px auto;
+/* ── CARD ROW ── */
+.cfp-card-row {
+  max-width: 840px;
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* ── INDIVIDUAL CARD ── */
+.cfp-card {
+  min-height: 80px;
+  background: #fbfbfb;
+  border-top: 1px solid #c7c7c7;
+  border-left: 1px solid #c7c7c7;
+  border-right: 1px solid #8d8d8d;
+  border-bottom: 4px solid #7f7ba6;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 14px 14px 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cfp-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1;
+}
+
+/* Icon box — sized to match screenshot */
+.cfp-card-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e9f1ff, #cfdcf7);
+  border: 1px solid #9bb0d8;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cfp-card-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.cfp-card-text {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cfp-card-text h3 {
+  margin: 0;
+  color: #1f2d88;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: pre-line;
+  font-family: "Times New Roman", serif;
+}
+
+.cfp-card-text p {
+  margin: 5px 0 0;
+  color: #757575;
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: "Times New Roman", serif;
+}
+
+/* Arrow button — fixed width, square */
+.cfp-arrow {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 0;
+  border-radius: 10px;
+  background: #2f2f86;
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cfp-arrow:hover {
+  background: #1e1e6e;
+}
+
+/* ── DESCRIPTION ── */
+.cfp-description {
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.58;
+  color: #20232d;
+  text-align: left;
+}
+
+.cfp-description p {
+  margin: 0 0 14px;
+  text-align: left;
+}
+
+/* ── TRACK SECTIONS ── */
+.track-section {
+  max-width: 980px;
+  margin: 48px auto 0;
+  text-align: left;
+  padding: 28px 150px 10px;
+}
+
+.track-number {
+  margin: 0 0 6px;
+  color: #ff0000;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Times New Roman", serif;
 }
 
 .track-title {
-  color: red;
+  margin: 0 0 10px;
+  color: #ff0000;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Times New Roman", serif;
 }
 
-.track-subtitle {
-  color: #2c3e8f;
+.track-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.track ul {
-  padding-left: 20px;
+.track-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #2a2a2a;
 }
 
-.track li {
-  margin-bottom: 6px;
+.track-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2a2a2a;
+  font-size: 18px;
 }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cfp-card-row {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .cfp-intro,
+  .cfp-description,
+  .track-section {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 100px) {
+  .cfp-page {
+    padding: 22px 60px 60px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .cfp-intro,
+  .cfp-description {
+    font-size: 16px;
+  }
+
+  .cfp-card {
+    padding: 12px 12px 12px 14px;
+    gap: 10px;
+  }
+
+  .cfp-card-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+  }
+
+  .cfp-card-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cfp-card-text h3 {
+    font-size: 17px;
+  }
+
+  .cfp-card-text p {
+    font-size: 13px;
+  }
+
+  .cfp-arrow {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    font-size: 22px;
+  }
+
+  .track-number {
+    font-size: 24px;
+  }
+
+  .track-title {
+    font-size: 19px;
+  }
+
+  .track-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #2a2a2a;
+  text-align: left;
+  }
+}
+

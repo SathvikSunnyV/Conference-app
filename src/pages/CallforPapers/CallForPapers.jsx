@@ -1,57 +1,109 @@
 import "./CallForPapers.css";
 
-function InfoCard({ title, subtitle }) {
+/* ── Inline SVG Icons matching the screenshot ── */
+const SubmissionIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Monitor */}
+    <rect x="8" y="8" width="48" height="34" rx="3" fill="#5b8dee" />
+    <rect x="11" y="11" width="42" height="28" rx="2" fill="#e8f0fe" />
+    {/* Screen content lines */}
+    <rect x="15" y="16" width="28" height="3" rx="1.5" fill="#5b8dee" opacity="0.5"/>
+    <rect x="15" y="22" width="20" height="3" rx="1.5" fill="#5b8dee" opacity="0.35"/>
+    {/* Stand */}
+    <rect x="28" y="42" width="8" height="6" rx="1" fill="#a0aec0"/>
+    <rect x="22" y="47" width="20" height="3" rx="1.5" fill="#a0aec0"/>
+    {/* Person at desk */}
+    <circle cx="46" cy="36" r="5" fill="#f6ad55"/>
+    <path d="M38 52 Q42 44 46 44 Q50 44 54 52" fill="#5b8dee"/>
+  </svg>
+);
+
+const EnvelopeIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Envelope body */}
+    <rect x="6" y="16" width="52" height="36" rx="3" fill="#5b8dee"/>
+    <rect x="8" y="18" width="48" height="32" rx="2" fill="#e8f0fe"/>
+    {/* Envelope flap */}
+    <path d="M8 20 L32 38 L56 20" stroke="#5b8dee" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
+    {/* Notification badge */}
+    <circle cx="48" cy="20" r="9" fill="#e53e3e"/>
+    <text x="48" y="24" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">1</text>
+  </svg>
+);
+
+function InfoCard({ title, subtitle, icon }) {
   return (
-    <div className="info-card">
-      <div>
-        <h4>{title}</h4>
-        {subtitle && <p>{subtitle}</p>}
+    <div className="cfp-card">
+      <div className="cfp-card-left">
+        <div className="cfp-card-icon" aria-hidden="true">
+          {icon}
+        </div>
+
+        <div className="cfp-card-text">
+          <h3>{title}</h3>
+          {subtitle && <p>{subtitle}</p>}
+        </div>
       </div>
-      <button className="arrow-btn">→</button>
+
+      <button className="cfp-arrow" aria-label={title}>
+        →
+      </button>
     </div>
   );
 }
 
-function Track({ title, subtitle, items }) {
+function Track({ number, title, items }) {
   return (
-    <div className="track">
+    <section className="track-section">
+      <h2 className="track-number">TRACK {number}:</h2>
       <h3 className="track-title">{title}</h3>
-      <h4 className="track-subtitle">{subtitle}</h4>
-      <ul>
-        {items.map((item, i) => (
-          <li key={i}>→ {item}</li>
+      <ul className="track-list">
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
 function CallForPapers() {
   return (
-    <div className="cfp-container">
-
-      <div className="title-box">
-        <h2>Call For Papers</h2>
+    <div className="cfp-page">
+      <div className="page-title-wrap">
+        <div className="page-title">Call For Papers</div>
       </div>
 
-      <p className="intro">
-        ASSIC 2026 technical tracks span original research in the field of smart enabled systems,
-        secure computing and intelligent technologies.
+      <p className="cfp-intro">
+        ASSIC 2026 technical tracks span original research in the field of smart enabled systems, secure computing and intelligent technologies for applications in all fields of science and technology.
       </p>
 
-      <div className="card-row">
-        <InfoCard title="Full Paper Submission is closed" />
-        <InfoCard title="Notification Of Acceptance" subtitle="April 25, 2026" />
+      <div className="cfp-card-row">
+        <InfoCard
+          title={"Full Paper Submission is\nclosed"}
+          icon={<SubmissionIcon />}
+        />
+        <InfoCard
+          title="Notification Of Acceptance"
+          subtitle="April 25 , 2026"
+          icon={<EnvelopeIcon />}
+        />
       </div>
 
-      <p className="description">
-        The International Conference on Advancements in Smart, Secure and Intelligent Computing aims to
-        attract high-quality, original research papers that go beyond incremental improvements.
-      </p>
+      <div className="cfp-description">
+        <p>
+          <strong>
+            The International Conference on Advancements in Smart, Secure and Intelligent Computing
+          </strong>{" "}
+          aims to attract high-quality, original research papers that go beyond incremental improvements to existing algorithms or routine applications of artificial intelligence and computing technologies. The conference particularly welcomes contributions that demonstrate conceptual depth, system-level thinking, and future relevance, addressing how intelligent computing can be designed to be adaptive, trustworthy, resilient, and impactful at scale.
+        </p>
+        <p>
+          Unlike conventional conferences that focus primarily on isolated AI models, performance benchmarks, or narrow application use cases, this conference emphasizes holistic intelligent systems—where intelligence, security, trust, sustainability, and human-centric considerations are treated as core design principles rather than afterthoughts. Submissions are encouraged to explore new paradigms, architectures, frameworks, and methodologies that redefine how smart and secure computing systems are conceived, built, and deployed in real-world and future environments.
+        </p>
+      </div>
 
       <Track
-        title="TRACK I:"
-        subtitle="Cognitive-Aware Intelligent Systems"
+        number="I"
+        title="Cognitive-Aware Intelligent Systems"
         items={[
           "Cognitive computing and reasoning-driven AI",
           "Cognitive architectures for autonomous intelligence",
@@ -59,42 +111,61 @@ function CallForPapers() {
           "Self-adaptive AI systems",
           "Meta-learning frameworks",
           "Context-aware intelligence",
-          "Explainable AI",
+          "Emotion-aware models",
+          "Explainable and introspective AI",
+          "Self-healing and fault-tolerant intelligent systems",
+          "Dynamic knowledge graphs",
+          "Collaborative intelligence",
           "Brain-inspired computing models",
-          "Autonomous decision-making under uncertainty"
+          "Multi-modal and cross-domain intelligence",
+          "Autonomous decision-making under uncertainty",
+          "Ethical cognition intelligence",
         ]}
       />
 
       <Track
-        title="TRACK II:"
-        subtitle="Trust-Centric Secure Autonomous Systems"
+        number="II"
+        title="Trust-Centric Secure Autonomous Systems"
         items={[
           "Trust modeling in AI systems",
           "Secure autonomous agents",
+          "Self-defending computing systems",
           "AI assurance techniques",
           "Secure federated learning",
           "Privacy-preserving analytics",
+          "Decentralized access management",
           "Blockchain-enabled trust frameworks",
-          "Zero-trust architectures",
-          "AI-driven cyber defense"
+          "Secure edge and fog intelligence architectures",
+          "Zero-trust architectures for intelligent systems",
+          "AI-driven cyber defense",
+          "Secure digital twins systems",
+          "Governance and regulation-aware AI",
+          "Forensic-ready systems",
+          "Ethical AI system design",
         ]}
       />
 
       <Track
-        title="TRACK III:"
-        subtitle="Smart and Sustainable Computing"
+        number="III"
+        title="Smart and Sustainable Computing for Societal Intelligence"
         items={[
           "Green intelligent computing",
-          "Sustainable cloud, edge, and IoT",
-          "Smart cities and infrastructure",
+          "Sustainable cloud, edge, and IoT systems",
+          "Smart computing for environmental monitoring",
+          "Human-centric and inclusive intelligent systems",
           "AI for assistive technologies",
-          "Data-driven decision systems",
+          "Smart cities and intelligent urban infrastructure",
+          "Intelligent mobility systems",
+          "AI-enabled disaster prediction and response",
+          "Digital twins for societal and environmental systems",
+          "Data-driven decision-making systems",
           "AI for learning analytics",
-          "Smart agriculture systems",
-          "Ethics and fairness in AI"
+          "Smart agriculture and food security systems",
+          "Socially aligned intelligent systems",
+          "Sustainable industrial and manufacturing intelligence",
+          "Ethics, fairness, and social impact of intelligent computing",
         ]}
       />
-
     </div>
   );
 }
