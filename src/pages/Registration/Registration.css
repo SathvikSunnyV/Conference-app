@@ -1,64 +1,213 @@
-.registration-container {
-  background: #cfd6df;
+.registration-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1e2937;
 }
 
-/* HERO */
-.hero {
-  background: linear-gradient(to right, #7b2ff7, #f107a3);
+.registration-hero {
+  height: 320px;
+  background-image: linear-gradient(rgba(30, 58, 138, 0.78), rgba(109, 40, 217, 0.75)), 
+                    url("/registration-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
+  overflow: hidden;
+}
+
+.registration-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.85), rgba(124, 58, 237, 0.75));
+}
+
+.registration-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 0 20px 100px;
+}
+
+.registration-hero__inner h1 {
+  font-size: clamp(1rem, 8vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  letter-spacing: -2px;
+}
+
+.registration-hero__inner p {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* Content */
+.registration-content {
+  max-width: 1100px;
+  margin: -60px auto 80px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.content-block {
+  background: white;
+  border-radius: 24px;
+  padding: 48px 52px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.content-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Titles */
+.page-title {
   text-align: center;
-  padding: 60px 20px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
 }
 
-.section {
-  max-width: 1000px;
-  margin: 40px auto;
+.section-title,
+.subsection-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 28px 0;
+  position: relative;
+  padding-bottom: 12px;
 }
 
-.section h2 {
-  text-align: center;
-  color: #2c3e8f;
+.section-title:after,
+.subsection-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border-radius: 2px;
 }
 
-.section h3 {
-  text-align: center;
+/* Check List */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
-/* LIST */
-.bullet {
-  margin-top: 20px;
-  padding-left: 20px;
+.check-list li {
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 22px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
 }
 
-.bullet li {
-  margin-bottom: 10px;
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
 }
 
-/* TABLE */
-.fee-table {
+/* Tables */
+.table-wrap {
   width: 100%;
+  overflow-x: auto;
   margin-top: 20px;
-  border-collapse: collapse;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 
-.fee-table th {
-  background: black;
-  color: white;
-  padding: 10px;
-}
-
-.fee-table td {
-  border: 1px solid #999;
-  padding: 10px;
-}
-
-/* BANK */
+.fee-table,
 .bank-table {
   width: 100%;
   border-collapse: collapse;
+  background: white;
+  min-width: 800px;
+  
 }
 
+.fee-table th {
+  background: #1e3a8a;
+  color: white;
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.fee-table td,
 .bank-table td {
-  border: 1px solid #999;
-  padding: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.05rem;
+}
+
+.fee-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.bank-table td:first-child {
+  font-weight: 700;
+  color: #1e3a8a;
+  width: 38%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-block {
+    padding: 40px 30px;
+    
+  }
+  
+  .registration-hero {
+    height: 340px;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .content-block {
+    padding: 32px 20px;
+    
+  }
+  
+  .check-list li {
+    font-size: 1.05rem;
+    
+  }
 }
