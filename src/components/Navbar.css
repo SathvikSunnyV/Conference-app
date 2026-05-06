@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .header {
@@ -27,7 +25,6 @@
 }
 
 .logo {
-  /* height: 54px; */
   width: auto;
   object-fit: contain;
   transition: transform 0.25s ease, filter 0.25s ease;
@@ -60,7 +57,8 @@
   align-items: center;
 }
 
-.nav ul li a {
+.nav ul li a,
+.archive-trigger {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -76,10 +74,13 @@
   background: transparent;
   border: 1px solid transparent;
   white-space: nowrap;
-  line-height: 0;
+  line-height: 0.5;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
-.nav ul li a::after {
+.nav ul li a::after,
+.archive-trigger::after {
   content: "";
   position: absolute;
   left: 16px;
@@ -93,7 +94,8 @@
   transition: transform 0.25s ease;
 }
 
-.nav ul li a:hover {
+.nav ul li a:hover,
+.archive-trigger:hover {
   color: #0f172a;
   background: rgba(37, 99, 235, 0.08);
   border-color: rgba(37, 99, 235, 0.12);
@@ -101,7 +103,8 @@
   transform: translateY(-1px);
 }
 
-.nav ul li a:hover::after {
+.nav ul li a:hover::after,
+.archive-trigger:hover::after {
   transform: scaleX(1);
 }
 
@@ -124,10 +127,60 @@
   box-shadow: 0 14px 28px rgba(14, 165, 233, 0.28);
 }
 
-/* Strong focus states for keyboard users */
-.nav ul li a:focus-visible {
+.nav ul li a:focus-visible,
+.archive-trigger:focus-visible {
   outline: 3px solid rgba(14, 165, 233, 0.35);
   outline-offset: 3px;
+}
+
+/* Dropdown */
+.archive-item {
+  position: relative;
+}
+
+.archive-trigger {
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.archive-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 165px;
+  background: #ffffff;
+  border: 1px solid #cfd7e3;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.15);
+  z-index: 2000;
+  overflow: hidden;
+}
+
+.archive-dropdown a {
+  display: block;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px dotted #3b82f6;
+  border-radius: 0;
+  background: #fff;
+}
+
+.archive-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.archive-dropdown a:hover {
+  background: #f4f7fb;
+  color: #0f172a;
+  transform: none;
+  box-shadow: none;
+}
+
+.archive-dropdown a::after {
+  display: none;
 }
 
 /* Responsive polish */
@@ -166,9 +219,14 @@
     gap: 6px;
   }
 
-  .nav ul li a {
+  .nav ul li a,
+  .archive-trigger {
     font-size: 12px;
     padding: 9px 12px;
+  }
+
+  .archive-dropdown {
+    min-width: 145px;
   }
 }
 
@@ -191,7 +249,12 @@
     border-radius: 999px;
   }
 
-  .nav ul li a {
+  .nav ul li a,
+  .archive-trigger {
     flex: 0 0 auto;
+  }
+
+  .archive-dropdown {
+    left: 0;
   }
 }
