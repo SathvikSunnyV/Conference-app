@@ -1,26 +1,119 @@
-.contact-container {
-  background: #cfd6df;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contact-page {
+  min-height: 100vh;
+  background: #d9e2ea;
+  font-family: "Times New Roman", serif;
+  color: #1f2937;
+  padding: 48px 16px;
 }
 
-.contact-box {
-  display: flex;
-  gap: 100px;
+.contact-shell {
+  width: min(1000px, 100%);
+  margin: 0 auto;
 }
 
-.contact-item {
+.contact-header {
   text-align: center;
+  margin-bottom: 34px;
 }
 
-.contact-item h2 {
-  color: blue;
+.contact-kicker {
+  display: inline-block;
+  color: #2c2f8f;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
-.contact-item p {
-  font-size: 24px;
-  margin: 5px 0;
+.contact-header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #253089;
+  letter-spacing: 1px;
+}
+
+.contact-header p {
+  margin: 12px auto 0;
+  max-width: 720px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(120, 130, 160, 0.35);
+  border-radius: 18px;
+  padding: 34px 28px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.16);
+}
+
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  color: white;
+  font-size: 30px;
+  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.25);
+}
+
+.contact-card h2 {
+  margin: 0 0 18px;
+  color: #2c2f8f;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.contact-card a {
+  display: block;
+  color: #1e40af;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 8px 0;
+  word-break: break-word;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-header h1 {
+    font-size: 34px;
+  }
+
+  .contact-header p {
+    font-size: 17px;
+  }
+
+  .contact-card h2 {
+    font-size: 24px;
+  }
+
+  .contact-card a {
+    font-size: 19px;
+  }
 }
