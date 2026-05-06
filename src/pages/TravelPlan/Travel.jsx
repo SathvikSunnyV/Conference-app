@@ -2,54 +2,69 @@ import "./Travel.css";
 
 function Travel() {
   return (
-    <div className="travel-container">
+    <div className="travel-page">
+      <div className="travel-shell">
+        <div className="travel-grid">
+          <div className="travel-text">
+            <div className="travel-kicker">Venue Guide</div>
+            <h2>How to Reach MLRIT</h2>
 
-      <div className="travel-content">
+            <p className="intro">
+              MLR Institute of Technology, Hyderabad is located in a well-connected
+              part of the city and can be reached easily by air, rail, and road.
+              The campus is accessible from major transport hubs, making travel
+              straightforward for outstation visitors and local commuters alike.
+            </p>
 
-        {/* LEFT SIDE */}
-        <div className="travel-text">
+            <section className="travel-section">
+              <h3>Air Connection</h3>
+              <p>
+                The nearest major airport is <strong>Rajiv Gandhi International Airport</strong>.
+                From the airport, visitors can reach MLRIT by cab, taxi, or app-based
+                transport services. The route is well connected through city roads
+                and usually takes around one to one and a half hours depending on traffic.
+              </p>
+            </section>
 
-          <h2>How to Reach Bhubaneswar</h2>
+            <section className="travel-section">
+              <h3>Rail Connection</h3>
+              <p>
+                Hyderabad is served by major railway stations such as{" "}
+                <strong>Secunderabad</strong>, <strong>Hyderabad Deccan</strong>, and
+                <strong>Kacheguda</strong>. From any of these stations, MLRIT can be
+                reached by cab, city bus, or metro-linked road transport depending on
+                your route.
+              </p>
+            </section>
 
-          <p>
-            Bhubaneswar, the capital city of Orissa state is located in the East part
-            of India and is well connected through Air, Rail and Road Network.
-          </p>
+            <section className="travel-section">
+              <h3>Road Connection</h3>
+              <p>
+                MLRIT is well connected by the road network in Hyderabad. Visitors can
+                travel by TSRTC buses, private cabs, autos, or personal vehicles.
+                The campus route is easy to locate using Google Maps and is reachable
+                from all major parts of the city.
+              </p>
+            </section>
+          </div>
 
-          <h3>Air Connection</h3>
-          <p>
-            The Biju Patnaik Airport of Bhubaneswar is well linked by air to major
-            cities like Delhi, Mumbai, Chennai, Kolkata, Hyderabad, and Bangalore.
-            Visit <a href="https://www.airindia.in">www.airindia.in</a> or{" "}
-            <a href="https://www.goindigo.in">www.goindigo.in</a>.
-          </p>
+          <div className="map-card">
+            <div className="map-frame">
+              <iframe
+                title="MLRIT Location"
+                src="https://www.google.com/maps?q=MLR+Institute+of+Technology,+Hyderabad&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
 
-          <h3>Rail Connection</h3>
-          <p>
-            Bhubaneswar is well connected by Indian Railways to major cities.
-            Visit <a href="https://www.indianrail.gov.in">www.indianrail.gov.in</a>{" "}
-            or <a href="https://www.irctc.co.in">www.irctc.co.in</a>.
-          </p>
-
-          <h3>Road Connection</h3>
-          <p>
-            Bhubaneswar is connected via national highways. The bus stand is
-            located near NH-5 and connects major cities.
-          </p>
-
+            <div className="map-caption">
+              <h4>MLR Institute of Technology</h4>
+              <p>Hyderabad, Telangana</p>
+            </div>
+          </div>
         </div>
-
-        {/* RIGHT SIDE (MAP) */}
-        <div className="map-container">
-          <iframe
-            title="KIIT Location"
-            src="https://www.google.com/maps?q=MLRIT+Hyderabad&output=embed"
-            loading="fast"
-          ></iframe>
-        </div>
-
       </div>
-
     </div>
   );
 }
