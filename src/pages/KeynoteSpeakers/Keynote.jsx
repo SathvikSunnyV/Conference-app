@@ -1,4 +1,4 @@
-import "./Keynote.css";
+import "./Keynote.css"
 
 function Keynote() {
   return (
