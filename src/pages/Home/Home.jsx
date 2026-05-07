@@ -5,6 +5,20 @@ import salford from "../../assets/salford.png";
 import bu from "../../assets/british-university.png";
 import ieeeapu from "../../assets/ieee-apu.png";
 import ieee from "../../assets/ieee.png";
+import srk from "../../assets/srk.png";
+import ss from "../../assets/ss.png";
+import sr from "../../assets/sr.png";
+import kfs from "../../assets/kfs.png";
+import tg from "../../assets/tg.png";
+import a from "../../assets/1.png";
+import b from "../../assets/2.png";
+import c from "../../assets/3.png";
+import d from "../../assets/4.png";
+import e from "../../assets/5.png";
+import f from "../../assets/6.png";
+import card1 from "../../assets/card1.png";
+import card2 from "../../assets/card2.png";
+import card3 from "../../assets/card3.png";
 
 function Home() {
   const calculateTimeLeft = () => {
@@ -44,7 +58,7 @@ function Home() {
               KIIT-DU Campus, Bhubaneswar, India
             </p>
 
-            <h1 className="main-title" style={{color: 'white'}}>ASSIC 2026</h1>
+            <h1 className="main-title" style={{ color: 'white' }}>ASSIC 2026</h1>
 
             <div className="divider"></div>
 
@@ -138,22 +152,81 @@ function Home() {
           {/* FEATURE SECTION */}
           <div className="feature-section">
             <div className="feature-grid">
+              {/* SPEAKERS CAROUSEL */}
               <div className="feature-card side-card">
                 <div className="feature-head">Speakers details of ASSIC 2026</div>
                 <div className="marquee-viewport">
                   <div className="marquee-track">
                     <div className="media-item">
-                      <img src={ieeeapu} alt="Speaker" />
+                      <img src={srk} alt="Speaker" />
                       <div className="media-caption">
                         <strong>Dr. Sivaramakrishnan R</strong>
                         <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
                       </div>
                     </div>
                     <div className="media-item">
-                      <img src={ieeeapu} alt="Speaker duplicate" />
+                      <img src={ss} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Mr. Sunil Sabat</strong>
+                        <span>Microsoft</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={sr} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Dr. Shashidhar R</strong>
+                        <span>Researcher, Samsung R & D, India</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={kfs} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Prof. (Dr.) Khaled Fouad Sayed</strong>
+                        <span></span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={tg} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Tarek Gaber</strong>
+                        <span></span>
+                      </div>
+                    </div>
+
+                    {/* duplicate set for smooth loop */}
+                    <div className="media-item">
+                      <img src={srk} alt="Speaker" />
                       <div className="media-caption">
                         <strong>Dr. Sivaramakrishnan R</strong>
                         <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={ss} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Mr. Sunil Sabat</strong>
+                        <span>Microsoft</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={sr} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Dr. Shashidhar R</strong>
+                        <span>Researcher, Samsung R & D, India</span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={kfs} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Prof. (Dr.) Khaled Fouad Sayed</strong>
+                        <span></span>
+                      </div>
+                    </div>
+                    <div className="media-item">
+                      <img src={tg} alt="Speaker" />
+                      <div className="media-caption">
+                        <strong>Tarek Gaber</strong>
+                        <span></span>
                       </div>
                     </div>
                   </div>
@@ -167,16 +240,25 @@ function Home() {
                 </p>
               </div>
 
+              {/* GLIMPSE CAROUSEL */}
               <div className="feature-card side-card">
                 <div className="feature-head">Glimpse of previous editions of conference</div>
                 <div className="marquee-viewport">
                   <div className="marquee-track">
-                    <div className="media-item">
-                      <img src={ieee} alt="Conference glimpse" />
-                    </div>
-                    <div className="media-item">
-                      <img src={ieee} alt="Conference glimpse duplicate" />
-                    </div>
+                    <div className="media-item"><img src={a} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={b} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={c} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={d} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={e} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={f} alt="Conference glimpse" /></div>
+
+                    {/* duplicate set for smooth loop */}
+                    <div className="media-item"><img src={a} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={b} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={c} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={d} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={e} alt="Conference glimpse" /></div>
+                    <div className="media-item"><img src={f} alt="Conference glimpse" /></div>
                   </div>
                 </div>
               </div>
@@ -186,7 +268,7 @@ function Home() {
             <div className="highlight-section">
               <div className="highlight-grid">
                 <div className="highlight-card">
-                  <img src="/kiit-campus.jpg" alt="KIIT Campus" />
+                  <img src={card1} alt="KIIT Campus" />
                   <div className="highlight-body">
                     <h3>Kalinga Institute Of Industrial Technology (KIIT)</h3>
                     <p>Deemed to be University</p>
@@ -194,7 +276,7 @@ function Home() {
                 </div>
 
                 <div className="highlight-card">
-                  <img src="/kiss-campus.jpg" alt="KISS Campus" />
+                  <img src={card2} alt="KISS Campus" />
                   <div className="highlight-body">
                     <h3>Kalinga Institute Of Social Sciences (KISS)</h3>
                     <p>A home for 30,000 indigenous children</p>
@@ -202,7 +284,7 @@ function Home() {
                 </div>
 
                 <div className="highlight-card">
-                  <img src="/achyuta-samanta.jpg" alt="Achyuta Samanta" />
+                  <img src={card3} alt="Achyuta Samanta" />
                   <div className="highlight-body">
                     <h3>Achyuta Samanta</h3>
                     <p>Founder, KIIT &amp; KISS</p>
