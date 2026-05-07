@@ -1,10 +1,38 @@
+import React, { useEffect, useRef, useState } from "react";
 import "./Workshop.css";
 
 function Section({ title, children }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -60px 0px",
+      }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="ws-section">
+    <section
+      ref={ref}
+      className={`ws-section ${visible ? "visible" : ""}`}
+    >
       <h3 className="ws-section-title">{title}</h3>
-      <div className="ws-section-content">{children}</div>
+
+      <div className="ws-section-content">
+        {children}
+      </div>
     </section>
   );
 }
@@ -12,6 +40,7 @@ function Section({ title, children }) {
 function Workshop() {
   return (
     <div className="workshop-page">
+
       <div className="ws-title-wrap">
         <div className="ws-title-box">
           <h2>Workshop 2026</h2>
@@ -24,35 +53,25 @@ function Workshop() {
       </div>
 
       <div className="ws-container">
+
         <Section title="Abstract">
           <p>
             The integration of Internet of Things (IoT) technologies into
             critical infrastructure systems—including electrical power grids,
             transportation networks, healthcare, and water management—has
             significantly enhanced operational efficiency while introducing
-            complex cybersecurity vulnerabilities. These systems, often
-            characterized by legacy integration, distributed architectures, and
-            resource-constrained devices, present expanded attack surfaces
-            susceptible to advanced cyber threats. Major incidents, such as the
-            Stuxnet cyberattack and the Colonial Pipeline ransomware attack,
-            underscore the critical need for robust and adaptive security
-            frameworks.
+            complex cybersecurity vulnerabilities.
           </p>
 
           <p>
             This workshop invites high-quality research paper submissions
             addressing theoretical advances, experimental studies, and applied
-            solutions in securing IoT-enabled critical infrastructure, aiming
-            to advance interdisciplinary research, strengthen cyber-physical
-            system resilience, and foster innovative approaches to threat
-            detection, prevention, and response. Interdisciplinary approaches
-            that integrate cybersecurity, artificial intelligence, and systems
-            engineering to improve resilience, detection, and response
-            capabilities are given a lot of attention.
+            solutions in securing IoT-enabled critical infrastructure.
           </p>
         </Section>
 
         <Section title="Scope and Topics of Interest">
+
           <p className="ws-intro">
             The workshop solicits original research papers on, but not limited
             to:
@@ -76,15 +95,13 @@ function Workshop() {
             <li>Addressing supply chain security risks in IoT devices</li>
             <li>Quantum computing and its impact on IoT cybersecurity</li>
           </ul>
+
         </Section>
 
         <Section title="Format and Review Process">
           <p>
             The workshop will follow a peer-reviewed academic format involving
-            the submission of original unpublished papers, a review process
-            conducted by an expert program committee, and the presentation of
-            accepted papers in oral sessions. Papers should submit in IEEE
-            format.
+            the submission of original unpublished papers.
           </p>
         </Section>
 
@@ -97,10 +114,8 @@ function Workshop() {
         <Section title="Submission and Publication Policy">
           <p>
             All registered papers accepted to this workshop will be published
-            in the main conference proceedings and indexed in IEEE Xplore. For
-            further details, please refer to the main conference author
-            information:
-            <a href="/">here</a>
+            in the main conference proceedings and indexed in IEEE Xplore.
+            <a href="/"> here</a>
           </p>
         </Section>
 
@@ -119,14 +134,6 @@ function Workshop() {
             <li>Prof. Hossam kasem, Egypt-Japan University of Science and Technology (E-JUST), Egypt</li>
             <li>Dr. Ahmed Arafa, Egypt-Japan University of Science and Technology (E-JUST), Egypt</li>
             <li>Dr. Mostafa Elsayed, Egypt-Japan University of Science and Technology (E-JUST),Egypt</li>
-            <li>Dr. Mohamed Elaraby, Benha University, Egypt</li>
-            <li>Prof. Rania Hodhod, Columbus State University, USA</li>
-            <li>Dr. Ahmed Hamed, Canadian University, UAE</li>
-            <li>Prof. Islam Amer, Portsmouth University, UK</li>
-            <li>Dr. Tarek Ali, Manchester Metropolitan University, UK</li>
-            <li>Dr. Alaa Othman, Bielefeld University of Applied Sciences and Arts, Germany</li>
-            <li>Dr. Salem AlJanah, Imam Mohammad Ibn Saud Islamic University, KSA</li>
-            <li>Dr. Mohamed Tahoun, Suez Canal University, Egypt</li>
           </ul>
         </Section>
 
@@ -137,6 +144,7 @@ function Workshop() {
             <li>Acceptance Notification: 25 May 2026</li>
           </ul>
         </Section>
+
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
 }
 
 .registration-hero {
-  height: 320px;
+  height: 220px;
   background-image: linear-gradient(rgba(30, 58, 138, 0.78), rgba(109, 40, 217, 0.75)), 
                     url("/registration-hero.jpg");
   background-size: cover;
