@@ -82,7 +82,7 @@ function Authors() {
           <p>
             WORD:
             <a
-              href="http://www.ieee.info/IEEE_template.docx"
+              href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx"
               target="_blank"
               rel="noreferrer"
             >
@@ -93,7 +93,7 @@ function Authors() {
           <p>
             LATEX:
             <a
-              href="http://www.ieee.info/IEEE_latex.zip"
+              href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/conference-latex-template_10-17-19.zip"
               target="_blank"
               rel="noreferrer"
             >
