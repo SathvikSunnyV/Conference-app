@@ -53,7 +53,7 @@ function Home() {
             </p>
 
             <p className="assic-home-sub-text">
-              KIIT-DU Campus, Bhubaneswar, India
+              MLRIT Campus, Hyderabad, India
             </p>
 
             <h1 className="assic-home-main-title" style={{ color: "white" }}>
@@ -62,7 +62,7 @@ function Home() {
 
             <div className="assic-home-divider"></div>
 
-            <h2 className="assic-home-university">KIIT UNIVERSITY</h2>
+            <h2 className="assic-home-university">MLR Institute of Technology</h2>
             <p className="assic-home-country">India</p>
 
             <button className="assic-home-mode-btn">HYBRID MODE</button>
@@ -77,12 +77,12 @@ function Home() {
 
               <div>
                 <p className="assic-home-label">WHERE</p>
-                <p className="assic-home-value">Bhubaneswar, India</p>
+                <p className="assic-home-value">Hyderabad, India</p>
               </div>
 
               <div>
                 <p className="assic-home-label">HOSTED BY</p>
-                <p className="assic-home-value">KIIT University</p>
+                <p className="assic-home-value">MLRIT </p>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ function Home() {
 
               <div className="assic-home-host-wrap">
                 <img src={kiit} alt="KIIT University" className="assic-home-host-image" />
-                <div className="assic-home-kiit-pill">KIIT University</div>
+                <div className="assic-home-kiit-pill">MLRIT</div>
               </div>
             </div>
           </div>
@@ -262,26 +262,26 @@ function Home() {
             <div className="assic-home-highlight-section">
               <div className="assic-home-highlight-grid">
                 <div className="assic-home-highlight-card">
-                  <img src={card1} alt="KIIT Campus" />
+                  <img src={card1} alt="MLRIT Campus" />
                   <div className="assic-home-highlight-body">
-                    <h3>Kalinga Institute Of Industrial Technology (KIIT)</h3>
-                    <p>Deemed to be University</p>
+                    <h3>Marri Laxman Reddy Institute of Technology (MLRIT)</h3>
+                    <p>Raising Engineers</p>
                   </div>
                 </div>
 
                 <div className="assic-home-highlight-card">
-                  <img src={card2} alt="KISS Campus" />
+                  <img src={card2} alt="MLRIT Campus" />
                   <div className="assic-home-highlight-body">
-                    <h3>Kalinga Institute Of Social Sciences (KISS)</h3>
-                    <p>A home for 30,000 indigenous children</p>
+                    <h3>Marri Laxman Reddy Group of Institutions </h3>
+                    <p>A Multidisciplinary Hub for Engineering, Medical and Pharmacy Education</p>
                   </div>
                 </div>
 
                 <div className="assic-home-highlight-card">
-                  <img src={card3} alt="Achyuta Samanta" />
+                  <img src={card3} alt="MLR" />
                   <div className="assic-home-highlight-body">
-                    <h3>Achyuta Samanta</h3>
-                    <p>Founder, KIIT &amp; KISS</p>
+                    <h3>Marri Laxman Reddy</h3>
+                    <p>founder-chairman of the MLR Group of Institutions </p>
                   </div>
                 </div>
               </div>

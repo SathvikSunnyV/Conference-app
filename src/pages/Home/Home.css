@@ -155,8 +155,9 @@
 
 .assic-home-info-row {
   margin-top: 28px;
+  margin-right: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 16px;
   background: rgba(255,255,255,0.1);
   padding: 16px 20px;

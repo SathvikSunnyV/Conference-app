@@ -20,7 +20,7 @@ function Committees() {
     {
       title: "General Chair",
       items: [
-        "Jnyana Ranjan Mohanty, KIIT, India",
+        "Jnyana Ranjan Mohanty, MLRIT, India",
         "Khaled Fouad Sayed Shaalan, BUiD, Dubai",
         "Debashish Das, Birmingham City University, UK",
       ],
@@ -29,30 +29,30 @@ function Committees() {
     {
       title: "Organizing Chairs",
       items: [
-        "Sushruta Mishra, KIIT, India",
+        "Sushruta Mishra, MLRIT, India",
         "Kshira Sagar Sahoo, SRMU, India",
       ],
     },
 
     {
       title: "Finance Chairs",
-      items: ["N. Biraja Isac, KIIT, India"],
+      items: ["N. Biraja Isac, MLRIT, India"],
     },
 
     {
       title: "Registration Chairs",
       items: [
-        "Suneeta Mohanty, KIIT, India",
-        "Santwana Sagnika, KIIT, India",
-        "Pratyusha Mukherjee, KIIT, India",
+        "Suneeta Mohanty, MLRIT, India",
+        "Santwana Sagnika, MLRIT, India",
+        "Pratyusha Mukherjee, MLRIT, India",
       ],
     },
 
     {
       title: "Workshop Chairs",
       items: [
-        "Ajit Kumar Pasayat, KIIT, India",
-        "Prabhu Prasad Dev, KIIT, India",
+        "Ajit Kumar Pasayat, MLRIT, India",
+        "Prabhu Prasad Dev, MLRIT, India",
       ],
     },
   ];
@@ -61,7 +61,7 @@ function Committees() {
     {
       title: "Program Chairs",
       items: [
-        "Hrudaya Kumar Tripathy, KIIT, India",
+        "Hrudaya Kumar Tripathy, MLRIT, India",
         "Sambit Kumar Mishra, SRMU, India",
         "Tarek Gaber, University of Salford, UK",
       ],
@@ -70,26 +70,26 @@ function Committees() {
     {
       title: "Publication Chairs",
       items: [
-        "Junali Jasmine Jena, KIIT, India",
-        "Satya Ranjan Dash, KIIT, India",
-        "Anuja Kumar Acharya, KIIT, India",
+        "Junali Jasmine Jena, MLRIT, India",
+        "Satya Ranjan Dash, MLRIT, India",
+        "Anuja Kumar Acharya, MLRIT, India",
       ],
     },
 
     {
       title: "Publicity Chairs",
       items: [
-        "Adyasha Dash, KIIT, India",
-        "Kunal Anand, KIIT, India",
+        "Adyasha Dash, MLRIT, India",
+        "Kunal Anand, MLRIT, India",
       ],
     },
 
     {
       title: "Session Management Chairs",
       items: [
-        "Jagannath Singh, KIIT, India",
-        "Partha Pratim Sarangi, KIIT, India",
-        "Lalit Kumar Vashishtha, KIIT, India",
+        "Jagannath Singh, MLRIT, India",
+        "Partha Pratim Sarangi, MLRIT, India",
+        "Lalit Kumar Vashishtha, MLRIT, India",
       ],
     },
 
@@ -104,10 +104,10 @@ function Committees() {
   ];
 
   const chairMembers = [
-    "Abhaya Kumar Sahoo, KIIT, India",
-    "Bhaswati Sahoo, KIIT, India",
-    "Lipika Mohanty, KIIT, India",
-    "Rabindra Barik, KIIT, India",
+    "Abhaya Kumar Sahoo, MLRIT, India",
+    "Bhaswati Sahoo, MLRIT, India",
+    "Lipika Mohanty, MLRIT, India",
+    "Rabindra Barik, MLRIT, India",
   ];
 
   const technicalMembers = [
@@ -160,17 +160,17 @@ function Committees() {
     "Joseph Bamidele AWOTUNDE, University of Ilorin, Nigeria",
     "Suchada Sitjongsataporn, Mahanakorn University of Technology, Thailand",
     "Sitthichai Ruchayosyothin, Sukhothai Thammathirat Open University, Thailand",
-    "Bhabani Sankar Prasad Mishra, KIIT, India",
-    "Anuja Kumar Acharya, KIIT, India",
-    "Minakhi Rout, KIIT, India",
-    "Namita Panda, KIIT, India",
-    "Lipika Mohanty, KIIT, India",
-    "Dayal Kumar Behera, KIIT, India",
+    "Bhabani Sankar Prasad Mishra, MLRIT, India",
+    "Anuja Kumar Acharya, MLRIT, India",
+    "Minakhi Rout, MLRIT, India",
+    "Namita Panda, MLRIT, India",
+    "Lipika Mohanty, MLRIT, India",
+    "Dayal Kumar Behera, MLRIT, India",
     "Vazeerudeen Hameed, Asia Pacific University, Malaysia",
     "Vinothini Kasinathan, Asia Pacific University, Malaysia",
-    "Manjusha Pandey, KIIT, India",
-    "Aleena Swetapadma, KIIT, India",
-    "Suchismita Rout, KIIT, India",
+    "Manjusha Pandey, MLRIT, India",
+    "Aleena Swetapadma, MLRIT, India",
+    "Suchismita Rout, MLRIT, India",
     "Murugananthan Velayutham, Asia Pacific University, Malaysia",
     "Nowshath Kadhar Batcha, Asia Pacific University, Malaysia",
     "Mohamad Affan Mohd Noh, Asia Pacific University, Malaysia",
@@ -211,13 +211,13 @@ function Committees() {
     "Chandrashekar Dutt Challa, Virginia State University, USA",
     "Dionysios Demetis, University of Hull, UK",
     "Yasser Al Helaly, Nova University, USA",
-    "Pradeep Kumar Mallick, KIIT, India",
+    "Pradeep Kumar Mallick, MLRIT, India",
     "Mário Caldeira, Technical University of Lisbon",
     "Vishnu S. Pendyala, San Jose State University, USA",
     "George Sammour, King Talal School of Business Technology, Jordan",
     "Gianluigi Ferrari, University of Parma, Italy",
     "Bharanidharan Shanmugam, Charles Darwin University, Australia",
-    "Hitesh Mohapatra, KIIT, India",
+    "Hitesh Mohapatra, MLRIT, India",
     "Vijayakumar Varadarajan, UTS Sydney, Australia",
     "Manoj Maharaj, University of KwaZulu Natal, South Africa",
     "Mariyam Ouaissa, Chouaib Doukkali University, Morocco",
@@ -228,7 +228,7 @@ function Committees() {
     "Muthumurugan, ISYX Technologies, Dubai",
     "Naveen Chilamkurti, La Trobe University, Australia",
     "Jacintha Menezes, Majan University College, Oman",
-    "Tanmoy Maitra, KIIT, India",
+    "Tanmoy Maitra, MLRIT, India",
     "Kadry Seifedine, Beirut Arab University, Lebanon",
     "Mohammed Alahmadi, University of Jeddah, Saudi Arabia",
     "Pradeep Kumar Roy, IIT Surat, India",
