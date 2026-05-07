@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Committees from "./pages/Committees/Committees.jsx";
-import CallForPapers from "./pages/CallForPapers/CallForPapers.jsx";
+import CallForPapers from "./pages/CallforPapers/CallForPapers.jsx";
 import Authors from "./pages/AuthorsInfo/Authors.jsx";
 import Keynote from "./pages/KeynoteSpeakers/Keynote.jsx";
 import Schedule from "./pages/ProgramSchedule/Schedule.jsx";
