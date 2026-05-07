@@ -3,39 +3,53 @@
 .cfp-page {
   min-height: 100vh;
   padding: 28px 20px 80px;
-  background: #dbe6f0;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.7), transparent 40%),
+    linear-gradient(180deg, #e4edf7 0%, #d6e1ee 100%);
   font-family: "Times New Roman", serif;
   color: #1f1f1f;
 }
 
 .page-title-wrap {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .page-title {
   display: inline-block;
-  padding: 3px 13px 4px;
-  border: 1px solid #bdbdbd;
-  background: linear-gradient(to bottom, #fbfbfb, #e8e8e8);
-  color: #34409d;
-  font-size: 23px;
+  padding: 10px 22px;
+  border: 1px solid #9aa6c9;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff, #e8efff);
+  color: #263b99;
+  font-size: 24px;
   font-style: italic;
   font-weight: 700;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-  line-height: 1;
+  box-shadow: 0 10px 25px rgba(44, 63, 140, 0.15);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.65), transparent);
+  transform: translateX(-100%);
+  animation: shine 3.5s ease-in-out infinite;
 }
 
 .cfp-intro {
   max-width: 980px;
   margin: 0 auto 22px;
   font-size: 20px;
-  line-height: 1.35;
+  line-height: 1.38;
   text-align: justify;
   word-spacing: 2px;
 }
 
-/* ── CARD ROW ── */
+/* CARD ROW */
 .cfp-card-row {
   max-width: 840px;
   margin: 0 auto 48px;
@@ -44,20 +58,25 @@
   gap: 14px;
 }
 
-/* ── INDIVIDUAL CARD ── */
+/* INDIVIDUAL CARD */
 .cfp-card {
-  min-height: 80px;
-  background: #fbfbfb;
-  border-top: 1px solid #c7c7c7;
-  border-left: 1px solid #c7c7c7;
-  border-right: 1px solid #8d8d8d;
+  min-height: 88px;
+  background: linear-gradient(180deg, #ffffff, #f2f5ff);
+  border: 1px solid rgba(122, 141, 191, 0.45);
   border-bottom: 4px solid #7f7ba6;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   padding: 14px 14px 14px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cfp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
 }
 
 .cfp-card-left {
@@ -68,12 +87,11 @@
   flex: 1;
 }
 
-/* Icon box — sized to match screenshot */
 .cfp-card-icon {
   width: 48px;
   height: 48px;
   flex: 0 0 48px;
-  border-radius: 10px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #e9f1ff, #cfdcf7);
   border: 1px solid #9bb0d8;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
@@ -101,42 +119,44 @@
   margin: 0;
   color: #1f2d88;
   font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.18;
   white-space: pre-line;
   font-family: "Times New Roman", serif;
 }
 
 .cfp-card-text p {
   margin: 5px 0 0;
-  color: #757575;
+  color: #6d6d6d;
   font-size: 15px;
   line-height: 1.2;
   font-family: "Times New Roman", serif;
 }
 
-/* Arrow button — fixed width, square */
 .cfp-arrow {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
   border: 0;
-  border-radius: 10px;
-  background: #2f2f86;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #34409d, #1f2d88);
   color: #fff;
-  font-size: 26px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 0 10px 20px rgba(31, 45, 136, 0.25);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cfp-arrow:hover {
-  background: #1e1e6e;
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, #1f2d88, #11185f);
+  box-shadow: 0 14px 24px rgba(31, 45, 136, 0.32);
 }
 
-/* ── DESCRIPTION ── */
+/* DESCRIPTION */
 .cfp-description {
   max-width: 980px;
   margin: 0 auto;
@@ -151,17 +171,26 @@
   text-align: left;
 }
 
-/* ── TRACK SECTIONS ── */
+/* TRACK SECTIONS */
 .track-section {
   max-width: 980px;
   margin: 48px auto 0;
   text-align: left;
   padding: 28px 150px 10px;
+
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.track-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .track-number {
   margin: 0 0 6px;
-  color: #ff0000;
+  color: #e80000;
   font-size: 28px;
   font-weight: 700;
   font-family: "Times New Roman", serif;
@@ -169,7 +198,7 @@
 
 .track-title {
   margin: 0 0 10px;
-  color: #ff0000;
+  color: #e80000;
   font-size: 22px;
   font-weight: 700;
   font-family: "Times New Roman", serif;
@@ -184,10 +213,21 @@
 .track-list li {
   position: relative;
   padding-left: 32px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   font-size: 18px;
   line-height: 1.35;
   color: #2a2a2a;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition-delay: calc(var(--i) * 45ms);
+}
+
+.track-section.visible .track-list li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .track-list li::before {
@@ -199,7 +239,14 @@
   font-size: 18px;
 }
 
-/* ── RESPONSIVE ── */
+/* ANIMATIONS */
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  45% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .cfp-card-row {
     grid-template-columns: 1fr;
@@ -211,15 +258,20 @@
   .track-section {
     max-width: 700px;
   }
+
+  .track-section {
+    padding: 24px 30px 10px;
+  }
 }
 
-@media (max-width: 100px) {
+@media (max-width: 600px) {
   .cfp-page {
-    padding: 22px 60px 60px;
+    padding: 22px 16px 60px;
   }
 
   .page-title {
     font-size: 20px;
+    padding: 9px 18px;
   }
 
   .cfp-intro,
@@ -230,6 +282,7 @@
   .cfp-card {
     padding: 12px 12px 12px 14px;
     gap: 10px;
+    border-radius: 16px;
   }
 
   .cfp-card-icon {
@@ -267,13 +320,7 @@
   }
 
   .track-list li {
-  position: relative;
-  padding-left: 32px;
-  margin-bottom: 4px;
-  font-size: 18px;
-  line-height: 1.35;
-  color: #2a2a2a;
-  text-align: left;
+    font-size: 16px;
+    padding-left: 28px;
   }
 }
-

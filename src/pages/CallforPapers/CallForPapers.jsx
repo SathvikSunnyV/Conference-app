@@ -1,32 +1,26 @@
+import React, { useEffect, useRef, useState } from "react";
 import "./CallForPapers.css";
 
-/* ── Inline SVG Icons matching the screenshot ── */
+/* ── Inline SVG Icons ── */
 const SubmissionIcon = () => (
   <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Monitor */}
     <rect x="8" y="8" width="48" height="34" rx="3" fill="#5b8dee" />
     <rect x="11" y="11" width="42" height="28" rx="2" fill="#e8f0fe" />
-    {/* Screen content lines */}
-    <rect x="15" y="16" width="28" height="3" rx="1.5" fill="#5b8dee" opacity="0.5"/>
-    <rect x="15" y="22" width="20" height="3" rx="1.5" fill="#5b8dee" opacity="0.35"/>
-    {/* Stand */}
-    <rect x="28" y="42" width="8" height="6" rx="1" fill="#a0aec0"/>
-    <rect x="22" y="47" width="20" height="3" rx="1.5" fill="#a0aec0"/>
-    {/* Person at desk */}
-    <circle cx="46" cy="36" r="5" fill="#f6ad55"/>
-    <path d="M38 52 Q42 44 46 44 Q50 44 54 52" fill="#5b8dee"/>
+    <rect x="15" y="16" width="28" height="3" rx="1.5" fill="#5b8dee" opacity="0.5" />
+    <rect x="15" y="22" width="20" height="3" rx="1.5" fill="#5b8dee" opacity="0.35" />
+    <rect x="28" y="42" width="8" height="6" rx="1" fill="#a0aec0" />
+    <rect x="22" y="47" width="20" height="3" rx="1.5" fill="#a0aec0" />
+    <circle cx="46" cy="36" r="5" fill="#f6ad55" />
+    <path d="M38 52 Q42 44 46 44 Q50 44 54 52" fill="#5b8dee" />
   </svg>
 );
 
 const EnvelopeIcon = () => (
   <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Envelope body */}
-    <rect x="6" y="16" width="52" height="36" rx="3" fill="#5b8dee"/>
-    <rect x="8" y="18" width="48" height="32" rx="2" fill="#e8f0fe"/>
-    {/* Envelope flap */}
-    <path d="M8 20 L32 38 L56 20" stroke="#5b8dee" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
-    {/* Notification badge */}
-    <circle cx="48" cy="20" r="9" fill="#e53e3e"/>
+    <rect x="6" y="16" width="52" height="36" rx="3" fill="#5b8dee" />
+    <rect x="8" y="18" width="48" height="32" rx="2" fill="#e8f0fe" />
+    <path d="M8 20 L32 38 L56 20" stroke="#5b8dee" strokeWidth="2.5" fill="none" strokeLinejoin="round" />
+    <circle cx="48" cy="20" r="9" fill="#e53e3e" />
     <text x="48" y="24" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">1</text>
   </svg>
 );
@@ -45,21 +39,23 @@ function InfoCard({ title, subtitle, icon }) {
         </div>
       </div>
 
-      <button className="cfp-arrow" aria-label={title}>
+      <button className="cfp-arrow" aria-label={title} type="button">
         →
       </button>
     </div>
   );
 }
 
-function Track({ number, title, items }) {
+function Track({ number, title, items, trackRef, isVisible }) {
   return (
-    <section className="track-section">
+    <section ref={trackRef} className={`track-section ${isVisible ? "visible" : ""}`}>
       <h2 className="track-number">TRACK {number}:</h2>
       <h3 className="track-title">{title}</h3>
       <ul className="track-list">
         {items.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} style={{ "--i": index }}>
+            {item}
+          </li>
         ))}
       </ul>
     </section>
@@ -67,6 +63,39 @@ function Track({ number, title, items }) {
 }
 
 function CallForPapers() {
+  const trackRefs = [useRef(null), useRef(null), useRef(null)];
+  const [visibleTracks, setVisibleTracks] = useState([false, false, false]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.dataset.index);
+            setVisibleTracks((prev) => {
+              const next = [...prev];
+              next[index] = true;
+              return next;
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: "0px 0px -80px 0px",
+      }
+    );
+
+    trackRefs.forEach((ref, index) => {
+      if (ref.current) {
+        ref.current.dataset.index = index;
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="cfp-page">
       <div className="page-title-wrap">
@@ -94,10 +123,10 @@ function CallForPapers() {
           <strong>
             The International Conference on Advancements in Smart, Secure and Intelligent Computing
           </strong>{" "}
-          aims to attract high-quality, original research papers that go beyond incremental improvements to existing algorithms or routine applications of artificial intelligence and computing technologies. The conference particularly welcomes contributions that demonstrate conceptual depth, system-level thinking, and future relevance, addressing how intelligent computing can be designed to be adaptive, trustworthy, resilient, and impactful at scale.
+          aims to attract high-quality, original research papers that go beyond incremental improvements to existing algorithms or routine applications of artificial intelligence and computing technologies.
         </p>
         <p>
-          Unlike conventional conferences that focus primarily on isolated AI models, performance benchmarks, or narrow application use cases, this conference emphasizes holistic intelligent systems—where intelligence, security, trust, sustainability, and human-centric considerations are treated as core design principles rather than afterthoughts. Submissions are encouraged to explore new paradigms, architectures, frameworks, and methodologies that redefine how smart and secure computing systems are conceived, built, and deployed in real-world and future environments.
+          Unlike conventional conferences that focus primarily on isolated AI models, performance benchmarks, or narrow application use cases, this conference emphasizes holistic intelligent systems—where intelligence, security, trust, sustainability, and human-centric considerations are treated as core design principles rather than afterthoughts.
         </p>
       </div>
 
@@ -121,6 +150,8 @@ function CallForPapers() {
           "Autonomous decision-making under uncertainty",
           "Ethical cognition intelligence",
         ]}
+        trackRef={trackRefs[0]}
+        isVisible={visibleTracks[0]}
       />
 
       <Track
@@ -143,6 +174,8 @@ function CallForPapers() {
           "Forensic-ready systems",
           "Ethical AI system design",
         ]}
+        trackRef={trackRefs[1]}
+        isVisible={visibleTracks[1]}
       />
 
       <Track
@@ -165,6 +198,8 @@ function CallForPapers() {
           "Sustainable industrial and manufacturing intelligence",
           "Ethics, fairness, and social impact of intelligent computing",
         ]}
+        trackRef={trackRefs[2]}
+        isVisible={visibleTracks[2]}
       />
     </div>
   );
