@@ -50,9 +50,10 @@ function Navbar() {
           <li>
             <Link to="/registration">Registration</Link>
           </li>
-         {/* <li>
+          <li>
             <Link to="/travel">Travel Plan</Link>
           </li>
+          {/*
           <li>
             <Link to="/workshop">Workshop 2026</Link>
           </li>
