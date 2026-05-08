@@ -266,7 +266,7 @@ function Home() {
                   <img src={card1} alt="MLRIT Campus" />
                   <div className="assic-home-highlight-body">
                     <h3>Marri Laxman Reddy Institute of Technology (MLRIT)</h3>
-                    <p>Raising Engineers</p>
+                    <p>Engineering ideas, Engineering Careers</p>
                   </div>
                 </div>
 
