@@ -58,7 +58,7 @@ function Home() {
             </p>
 
             <h1 className="assic-home-main-title" style={{ color: "white" }}>
-              ASSIC 2026
+              ICASSIC 2026
             </h1>
 
             <div className="assic-home-divider"></div>
@@ -234,7 +234,7 @@ function Home() {
               <div className="assic-home-welcome-panel">
                 <div className="assic-home-welcome-badge">Welcome</div>
                 <p>
-                  <strong>Advancements in Smart, Secure and Intelligent Computing (ASSIC)</strong> aims to highlight recent development research works in Information and Communication Technologies so as to create intelligent systems driven by automation capabilities thereby addressing prevailing concerns faced by humanity. It aims to integrate the capabilities of computer units, social media, security methods and communication networks together with smart devices, internet technologies, big data analytics, computational intelligence and intelligent systems to realize various innovative applications. ASSIC can provide a platform in not only designing smart computing systems but also in incorporating machine intelligence based hi-tech system models with advanced security measures. It provides a premier interdisciplinary platform for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in modern technologies like Internet-of-Things, edge computing, cloud computing, secure intelligent frameworks and ubiquitous computing.
+                  <strong>International Conference on Advancements in Smart, Secure and Intelligent Computing (ICASSIC)</strong> <br /> aims to highlight recent development research works in Information and Communication Technologies so as to create intelligent systems driven by automation capabilities thereby addressing prevailing concerns faced by humanity. It aims to integrate the capabilities of computer units, social media, security methods and communication networks together with smart devices, internet technologies, big data analytics, computational intelligence and intelligent systems to realize various innovative applications. ASSIC can provide a platform in not only designing smart computing systems but also in incorporating machine intelligence based hi-tech system models with advanced security measures. It provides a premier interdisciplinary platform for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in modern technologies like Internet-of-Things, edge computing, cloud computing, secure intelligent frameworks and ubiquitous computing.
                 </p>
               </div>
 

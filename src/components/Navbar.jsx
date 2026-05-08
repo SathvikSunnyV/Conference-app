@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import mlritlogo from "../assets/mlritlogo.png";
-import mlritassic from "../assets/mlritassic.png";
+import icassicmlrit from "../assets/icassicmlritlogo.png";
 
 
 function Navbar() {
@@ -25,7 +25,7 @@ function Navbar() {
       <nav className="nav">
         <div className="logo-section">
           {/* <img src={mlritlogo} alt="MLRIT" className="logo" height={45} /> */}
-          <img src={mlritassic} alt="ASSIC" className="logo" height={45} />
+          <img src={icassicmlrit} alt="ASSIC" className="logo" height={45} />
         </div>
 
         <ul>
@@ -50,7 +50,7 @@ function Navbar() {
           <li>
             <Link to="/registration">Registration</Link>
           </li>
-          <li>
+         {/* <li>
             <Link to="/travel">Travel Plan</Link>
           </li>
           <li>
@@ -82,7 +82,8 @@ function Navbar() {
                 </Link>
               </div>
             )}
-          </li>
+          </li> 
+          */}
 
           <li>
             <Link to="/contact">Contact Us</Link>

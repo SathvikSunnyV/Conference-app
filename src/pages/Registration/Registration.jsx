@@ -10,7 +10,8 @@ function Registration() {
           <p>Home &nbsp; | &nbsp; Registration</p>
         </div>
       </section>
-
+<>
+  {false && (
       <main className="registration-content">
         
         {/* Paper Submission */}
@@ -131,7 +132,21 @@ function Registration() {
         </section>
 
       </main>
+      )}
+</>
+
+      <div className="simple-page">
+
+      <div className="title-box">
+        <h2>Registration</h2>
+      </div>
+
+      <p className="placeholder">To be updated soon.</p>
+
     </div>
+    </div>
+
+    
   );
 }
 
