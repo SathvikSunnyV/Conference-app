@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-// import mlritlogo from "../assets/mlritlogo.png";
-import assiclogo from "../assets/assiclogo.png";
+import mlritlogo from "../assets/mlritlogo.png";
+import mlritassic from "../assets/mlritassic.png";
+
 
 function Navbar() {
   const [archiveOpen, setArchiveOpen] = useState(false);
@@ -24,7 +25,7 @@ function Navbar() {
       <nav className="nav">
         <div className="logo-section">
           {/* <img src={mlritlogo} alt="MLRIT" className="logo" height={45} /> */}
-          <img src={assiclogo} alt="ASSIC" className="logo" height={45} />
+          <img src={mlritassic} alt="ASSIC" className="logo" height={45} />
         </div>
 
         <ul>

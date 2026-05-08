@@ -19,6 +19,7 @@ import f from "../../assets/6.png";
 import card1 from "../../assets/card1.png";
 import card2 from "../../assets/card2.png";
 import card3 from "../../assets/card3.png";
+import mlritlogo from "../../assets/mlritlogo.png";
 
 function Home() {
   const calculateTimeLeft = () => {
@@ -143,7 +144,7 @@ function Home() {
               <h2 className="assic-home-section-heading assic-home-hosted-heading">Hosted By</h2>
 
               <div className="assic-home-host-wrap">
-                <img src={kiit} alt="KIIT University" className="assic-home-host-image" />
+                <img src={mlritlogo} alt="KIIT University" className="assic-home-host-image" />
                 <div className="assic-home-kiit-pill">MLRIT</div>
               </div>
             </div>
