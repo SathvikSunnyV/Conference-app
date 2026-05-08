@@ -30,8 +30,8 @@ function Travel() {
               <h3>Rail Connection</h3>
               <p>
                 Hyderabad is served by major railway stations such as{" "}
-                <strong>Secunderabad</strong>, <strong>Hyderabad Deccan</strong>, and
-                <strong>Kacheguda</strong>. From any of these stations, MLRIT can be
+                <strong>Secunderabad</strong>, <strong>Hyderabad Deccan</strong>, and {}
+                <strong>Kachiguda</strong>. From any of these stations, MLRIT can be
                 reached by cab, city bus, or metro-linked road transport depending on
                 your route.
               </p>
