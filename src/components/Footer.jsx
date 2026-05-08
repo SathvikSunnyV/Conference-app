@@ -1,17 +1,18 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <a href="/">Home</a>
-        <a href="/committees">Committees</a>
-        <a href="/cfp">Call For Papers</a>
-        <a href="/authors">Information For Authors</a>
-        <a href="/speakers">Keynote Speakers</a>
-        <a href="/schedule">Program Schedule</a>
-        <a href="/registration">Registration</a>
-        <a href="/travel">Lodging & Travel</a>
+        <Link to="/">Home</Link>
+        <Link to="/committees">Committees</Link>
+        <Link to="/cfp">Call For Papers</Link>
+        <Link to="/authors">Information For Authors</Link>
+        <Link to="/speakers">Keynote Speakers</Link>
+        <Link to="/schedule">Program Schedule</Link>
+        <Link to="/registration">Registration</Link>
+        <Link to="/travel">Lodging & Travel</Link>
       </div>
 
       <p className="footer-text">
