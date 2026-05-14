@@ -1,26 +1,371 @@
-/* Keynote.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.simple-page {
-  background: #dbe6f0;
-  min-height: 80vh;
-  padding: 60px 20px;
-  text-align: center;
+.keynote-page {
+  background: #d9e4ef;
+  min-height: 100vh;
+  padding: 40px 32px 60px;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Title Section ─── */
+.keynote-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto 48px;
+  max-width: 1200px;
+}
+
+.keynote-title-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(to right, transparent, #2a4a7f);
+  position: relative;
+}
+
+.keynote-title-line.right {
+  background: linear-gradient(to left, transparent, #2a4a7f);
+}
+
+.keynote-title-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2a4a7f;
+}
+
+.keynote-title-line:not(.right)::after {
+  right: 0;
+}
+
+.keynote-title-line.right::after {
+  left: 0;
 }
 
 .title-box {
-  margin-bottom: 40px;
+  background: white;
+  padding: 14px 52px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #c8d8eb;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .title-box h2 {
-  display: inline-block;
-  background: rgb(232, 237, 239);
-  padding: 8px 20px;
-  border: 1px solid #999;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #0d1f4e;
+  letter-spacing: -0.3px;
 }
 
-.placeholder {
-  font-size: 32px;
-  color: #333;
-  font-weight: bold;
+/* ─── Grid ─── */
+.keynote-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
 }
+
+/* ─── Card ─── */
+.keynote-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2eaf4;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.32s ease;
+  position: relative;
+  cursor: default;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.keynote-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.keynote-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  z-index: 3;
+  border-radius: 16px 16px 0 0;
+}
+
+.keynote-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.14), 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.keynote-card:hover::before {
+  transform: translateX(120%);
+}
+
+.keynote-card:hover::after {
+  opacity: 1;
+}
+
+/* ─── Image ─── */
+.keynote-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #eef2f8;
+}
+
+.keynote-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.keynote-card:hover .keynote-card-image {
+  transform: scale(1.04);
+}
+
+/* ─── Card Body ─── */
+.keynote-card-body {
+  padding: 18px 16px 20px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.keynote-card-body h3 {
+  font-size: 15.5px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #0d1f4e;
+  margin: 0 0 8px;
+  transition: color 0.25s ease;
+}
+
+.keynote-card:hover .keynote-card-body h3 {
+  color: #1e40af;
+}
+
+.keynote-card-designation, .keynote-card-expertise  {
+  font-size: 13px;
+  font-weight: 400;
+  color: #374151;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.keynote-card-divider {
+  width: 32px;
+  height: 2px;
+  background: #c8d8eb;
+  margin: 12px auto;
+  border-radius: 2px;
+  transition: background 0.25s ease, width 0.35s ease;
+}
+
+.keynote-card:hover .keynote-card-divider {
+  background: #3b82f6;
+  width: 48px;
+}
+
+.keynote-card-institution-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7px;
+   margin-top: auto;
+}
+
+.keynote-card-institution-icon {
+  font-size: 18px;
+  color: #2a4a7f;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: color 0.25s ease;
+}
+
+.keynote-card:hover .keynote-card-institution-icon {
+  color: #1e40af;
+}
+
+.keynote-card-institution {
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.25s ease;
+}
+
+.keynote-card:hover .keynote-card-institution {
+  color: #1e40af;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1100px) {
+  .keynote-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-box h2 {
+    font-size: 26px;
+  }
+  .title-box {
+    padding: 12px 28px;
+  }
+  .keynote-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .keynote-page {
+    padding: 24px 14px 40px;
+  }
+}
+
+/* ─── Grid ─── */
+.keynote-grid {
+  max-width: 900px;          /* smaller overall grid width */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;                  /* reduced spacing between cards */
+  align-items: start;
+}
+
+/* ─── Card ─── */
+.keynote-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2eaf4;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.32s ease;
+  position: relative;
+  cursor: default;
+
+  padding: 10px;              /* padding on all sides inside the card */
+}
+
+/* ─── Image ─── */
+.keynote-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 5 / 5;
+  background: #eef2f8;
+  border-radius: 10px;        /* makes image sit neatly inside padded card */
+}
+
+/* ─── Card Body ─── */
+.keynote-card-body {
+  padding: 14px 10px 14px;    /* smaller body padding */
+  text-align: center;
+}
+
+.keynote-card-body h3 {
+  font-size: 14px;            /* smaller heading */
+  line-height: 1.35;
+  font-weight: 700;
+  color: #0d1f4e;
+  margin: 0 0 6px;
+}
+
+.keynote-card-designation {
+  font-size: 12px;            /* smaller text */
+  font-weight: 400;
+  color: #374151;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.keynote-card-divider {
+  width: 28px;
+  height: 2px;
+  background: #c8d8eb;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.keynote-card-institution {
+  font-size: 12px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.45;
+  text-align: left;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1100px) {
+  .keynote-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-box h2 {
+    font-size: 26px;
+  }
+
+  .title-box {
+    padding: 12px 28px;
+  }
+
+  .keynote-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .keynote-page {
+    padding: 24px 14px 40px;
+  }
+
+  .keynote-card {
+    padding: 8px;
+  }
+
+  .keynote-card-body {
+    padding: 12px 8px 12px;
+  }
+}
+

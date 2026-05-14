@@ -63,8 +63,29 @@ function Track({ number, title, items, trackRef, isVisible }) {
 }
 
 function CallForPapers() {
-  const trackRefs = [useRef(null), useRef(null), useRef(null)];
-  const [visibleTracks, setVisibleTracks] = useState([false, false, false]);
+  const trackRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
+
+  const [visibleTracks, setVisibleTracks] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -103,7 +124,7 @@ function CallForPapers() {
       </div>
 
       <p className="cfp-intro">
-        ASSIC 2026 technical tracks span original research in the field of smart enabled systems, secure computing and intelligent technologies for applications in all fields of science and technology.
+        ICASSIC 2026 technical tracks span original research in the field of smart enabled systems, secure computing and intelligent technologies for applications in all fields of science and technology.
       </p>
 
       <div className="cfp-card-row">
@@ -132,23 +153,15 @@ function CallForPapers() {
 
       <Track
         number="I"
-        title="Cognitive-Aware Intelligent Systems"
+        title="Artificial Intelligence and Its Applications"
         items={[
-          "Cognitive computing and reasoning-driven AI",
-          "Cognitive architectures for autonomous intelligence",
-          "Incremental learning models",
-          "Self-adaptive AI systems",
-          "Meta-learning frameworks",
-          "Context-aware intelligence",
-          "Emotion-aware models",
-          "Explainable and introspective AI",
-          "Self-healing and fault-tolerant intelligent systems",
-          "Dynamic knowledge graphs",
-          "Collaborative intelligence",
-          "Brain-inspired computing models",
-          "Multi-modal and cross-domain intelligence",
-          "Autonomous decision-making under uncertainty",
-          "Ethical cognition intelligence",
+          "Machine Learning and Deep Learning",
+          "Explainable and Trustworthy AI",
+          "Generative AI and Large Language Models",
+          "AI in Agriculture and Smart Cities",
+          "Reinforcement Learning",
+          "AI Ethics and Responsible AI",
+          "Intelligent Decision Support Systems",
         ]}
         trackRef={trackRefs[0]}
         isVisible={visibleTracks[0]}
@@ -156,23 +169,16 @@ function CallForPapers() {
 
       <Track
         number="II"
-        title="Trust-Centric Secure Autonomous Systems"
+        title="IoT and Smart Systems"
         items={[
-          "Trust modeling in AI systems",
-          "Secure autonomous agents",
-          "Self-defending computing systems",
-          "AI assurance techniques",
-          "Secure federated learning",
-          "Privacy-preserving analytics",
-          "Decentralized access management",
-          "Blockchain-enabled trust frameworks",
-          "Secure edge and fog intelligence architectures",
-          "Zero-trust architectures for intelligent systems",
-          "AI-driven cyber defense",
-          "Secure digital twins systems",
-          "Governance and regulation-aware AI",
-          "Forensic-ready systems",
-          "Ethical AI system design",
+          "Smart Sensors and Devices",
+          "Industrial IoT (IIoT)",
+          "Smart Homes and Smart Cities",
+          "Edge and Fog Computing",
+          "IoT Security and Privacy",
+          "Wireless Sensor Networks",
+          "Embedded Systems for IoT",
+          "Cloud-Based IoT Applications",
         ]}
         trackRef={trackRefs[1]}
         isVisible={visibleTracks[1]}
@@ -180,26 +186,121 @@ function CallForPapers() {
 
       <Track
         number="III"
-        title="Smart and Sustainable Computing for Societal Intelligence"
+        title="Digital Image, Video, Speech, and Audio Signal Processing"
         items={[
-          "Green intelligent computing",
-          "Sustainable cloud, edge, and IoT systems",
-          "Smart computing for environmental monitoring",
-          "Human-centric and inclusive intelligent systems",
-          "AI for assistive technologies",
-          "Smart cities and intelligent urban infrastructure",
-          "Intelligent mobility systems",
-          "AI-enabled disaster prediction and response",
-          "Digital twins for societal and environmental systems",
-          "Data-driven decision-making systems",
-          "AI for learning analytics",
-          "Smart agriculture and food security systems",
-          "Socially aligned intelligent systems",
-          "Sustainable industrial and manufacturing intelligence",
-          "Ethics, fairness, and social impact of intelligent computing",
+          "Image Enhancement and Restoration",
+          "Computer Vision and Pattern Recognition",
+          "Medical Image Processing",
+          "Video Analytics and Surveillance",
+          "Speech Recognition and Synthesis",
+          "Emotion Recognition from Speech",
+          "Audio Signal Analysis",
+          "Multimedia Signal Processing",
         ]}
         trackRef={trackRefs[2]}
         isVisible={visibleTracks[2]}
+      />
+
+      <Track
+        number="IV"
+        title="Natural Language Processing and Technologies"
+        items={[
+          "Text Mining and Sentiment Analysis",
+          "Machine Translation",
+          "Conversational AI and Chatbots",
+          "Information Retrieval Systems",
+          "Speech-to-Text and Text-to-Speech",
+          "Multilingual NLP",
+          "Large Language Models",
+          "Low-Resource Language Processing",
+        ]}
+        trackRef={trackRefs[3]}
+        isVisible={visibleTracks[3]}
+      />
+
+      <Track
+        number="V"
+        title="Robotics and Intelligent Automation"
+        items={[
+          "Autonomous Robots",
+          "Industrial Automation",
+          "Drone and UAV Technologies",
+          "Human–Robot Interaction",
+          "Swarm Robotics",
+          "Robotic Vision Systems",
+          "Intelligent Control Systems",
+          "AI-Based Automation",
+        ]}
+        trackRef={trackRefs[4]}
+        isVisible={visibleTracks[4]}
+      />
+
+      <Track
+        number="VI"
+        title="Data Science and Advanced Analytics"
+        items={[
+          "Big Data Analytics",
+          "Predictive and Prescriptive Analytics",
+          "Data Visualization",
+          "Business Intelligence",
+          "Data Mining Techniques",
+          "Time Series Analysis",
+          "AI for Data Analytics",
+          "Cloud Data Engineering",
+        ]}
+        trackRef={trackRefs[5]}
+        isVisible={visibleTracks[5]}
+      />
+
+      <Track
+        number="VII"
+        title="Smart Healthcare Technologies"
+        items={[
+          "AI in Medical Diagnosis",
+          "Wearable Health Devices",
+          "Telemedicine and e-Health",
+          "Medical Image Analysis",
+          "Healthcare Data Analytics",
+          "Remote Patient Monitoring",
+          "Intelligent Healthcare Systems",
+          "Biomedical Signal Processing",
+        ]}
+        trackRef={trackRefs[6]}
+        isVisible={visibleTracks[6]}
+      />
+
+      <Track
+        number="VIII"
+        title="Cyber-Physical and Intelligent Systems"
+        items={[
+          "Smart Manufacturing Systems",
+          "Autonomous Cyber-Physical Systems",
+          "Digital Twins",
+          "Intelligent Transportation Systems",
+          "Real-Time Embedded Systems",
+          "Smart Grid Technologies",
+          "CPS Security and Reliability",
+          "Human-in-the-Loop Systems",
+        ]}
+        trackRef={trackRefs[7]}
+        isVisible={visibleTracks[7]}
+      />
+
+      <Track
+        number="IX"
+        title="Emerging Trends in Intelligent Computing Systems"
+        items={[
+          "Quantum Computing",
+          "Neuromorphic Computing",
+          "Edge AI and TinyML",
+          "Green and Sustainable Computing",
+          "Human-Centered Intelligent Systems",
+          "Autonomous Intelligent Systems",
+          "Intelligent Cloud Computing",
+          "Industry 5.0 Technologies",
+        ]}
+        trackRef={trackRefs[8]}
+        isVisible={visibleTracks[8]}
       />
     </div>
   );

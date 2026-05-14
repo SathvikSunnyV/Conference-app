@@ -1,3 +1,7 @@
+// import srk from "../../assets/srk.png";
+// import sr from "../../assets/sr.png";
+// import kfs from "../../assets/kfs.png";
+// import tg from "../../assets/tg.png";
 import { useEffect, useState } from "react";
 import "./Home.css";
 import kiit from "../../assets/kiit.png";
@@ -5,11 +9,6 @@ import salford from "../../assets/salford.png";
 import bu from "../../assets/british-university.png";
 import ieeeapu from "../../assets/ieee-apu.png";
 import ieee from "../../assets/ieee.png";
-import srk from "../../assets/srk.png";
-import ss from "../../assets/ss.png";
-import sr from "../../assets/sr.png";
-import kfs from "../../assets/kfs.png";
-import tg from "../../assets/tg.png";
 import a from "../../assets/1.png";
 import b from "../../assets/2.png";
 import c from "../../assets/3.png";
@@ -20,6 +19,13 @@ import card1 from "../../assets/card1.png";
 import card2 from "../../assets/card2.png";
 import card3 from "../../assets/card3.png";
 import mlritlogo from "../../assets/mlritlogo.png";
+import ss from "../../assets/ss.png";
+import vs from "../../assets/vs.png";
+import rs from "../../assets/rs.png";
+import dre from "../../assets/dre.png";
+import smt from "../../assets/smt.png";
+import ckm from "../../assets/ckm.png";
+import rp from "../../assets/rp.png";
 
 function Home() {
   const calculateTimeLeft = () => {
@@ -153,80 +159,170 @@ function Home() {
           <div className="assic-home-feature-section">
             <div className="assic-home-feature-grid">
               <div className="assic-home-feature-card assic-home-side-card">
-                <div className="assic-home-feature-head">Speakers details of ASSIC 2026</div>
+                <div className="assic-home-feature-head">Speakers details of ICASSIC 2026</div>
+
                 <div className="assic-home-marquee-viewport">
-                  <div className="assic-home-marquee-track">
+                  <div className="assic-home-marquee-track assic-home-speaker-track">
+
+                    {/* ORIGINAL SET */}
                     <div className="assic-home-media-item">
-                      <img src={srk} alt="Speaker" />
+                      <img src={vs} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Dr. Sivaramakrishnan R</strong>
-                        <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
-                      </div>
-                    </div>
-                    <div className="assic-home-media-item">
-                      <img src={ss} alt="Speaker" />
-                      <div className="assic-home-media-caption">
-                        <strong>Mr. Sunil Sabat</strong>
-                        <span>Microsoft</span>
-                      </div>
-                    </div>
-                    <div className="assic-home-media-item">
-                      <img src={sr} alt="Speaker" />
-                      <div className="assic-home-media-caption">
-                        <strong>Dr. Shashidhar R</strong>
-                        <span>Researcher, Samsung R &amp; D, India</span>
-                      </div>
-                    </div>
-                    <div className="assic-home-media-item">
-                      <img src={kfs} alt="Speaker" />
-                      <div className="assic-home-media-caption">
-                        <strong>Prof. (Dr.) Khaled Fouad Sayed</strong>
-                        <span></span>
-                      </div>
-                    </div>
-                    <div className="assic-home-media-item">
-                      <img src={tg} alt="Speaker" />
-                      <div className="assic-home-media-caption">
-                        <strong>Tarek Gaber</strong>
-                        <span></span>
+                        <strong>Dr. Velagapudi Sreenivas</strong>
+                        <span>
+                          Professor & HOD, Department of CSE( Data Science), SRK Institute
+                          of Technology, Vijayawada
+                        </span>
                       </div>
                     </div>
 
                     <div className="assic-home-media-item">
-                      <img src={srk} alt="Speaker" />
+                      <img src={ss} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Dr. Sivaramakrishnan R</strong>
-                        <span>Guruvayur, Chief AI Scientist, aaquarian.ai, Dubai</span>
+                        <strong>Dr. C. Syamsundar</strong>
+                        <span>
+                          Director – Research and Development Sreenidhi University,
+                          Hyderabad, Telangana
+                        </span>
                       </div>
                     </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={rs} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Dr. M. RajaSekar</strong>
+                        <span>
+                          Professor, Department of CSE(DataScience), VNR Vignana Jyothi
+                          Institute of Engineering & Technology, Hyderabad, Telangana
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={dre} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Dr. Damodar Reddy Edla</strong>
+                        <span>
+                          Associate Professor, Department of Computer Science and Engineering,
+                          National Institute of Technology, Goa
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={smt} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Dr. Sabu M. Thampi</strong>
+                        <span>
+                          Professor, School of Computer Science & Engineering (SoCSE), On
+                          sabbatical (2026) Coordinator, Connected Systems & Intelligence Lab
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={ckm} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>C Krishna Mohan</strong>
+                        <span>
+                          Professor (HAG), Department of Computer Science and Engineering,
+                          Former Dean of Public and Corporate Relations, Indian Institute of
+                          Technology, Hyderabad
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={rp} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Prof. R Padmavathy</strong>
+                        <span>
+                          Professor Department of Computer Science and Engineering Information
+                          NIT Warangal
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* DUPLICATE SET FOR SEAMLESS LOOP */}
+
+                    <div className="assic-home-media-item">
+                      <img src={vs} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Dr. Velagapudi Sreenivas</strong>
+                        <span>
+                          Professor & HOD, Department of CSE( Data Science), SRK Institute
+                          of Technology, Vijayawada
+                        </span>
+                      </div>
+                    </div>
+
                     <div className="assic-home-media-item">
                       <img src={ss} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Mr. Sunil Sabat</strong>
-                        <span>Microsoft</span>
+                        <strong>Dr. C. Syamsundar</strong>
+                        <span>
+                          Director – Research and Development Sreenidhi University,
+                          Hyderabad, Telangana
+                        </span>
                       </div>
                     </div>
+
                     <div className="assic-home-media-item">
-                      <img src={sr} alt="Speaker" />
+                      <img src={rs} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Dr. Shashidhar R</strong>
-                        <span>Researcher, Samsung R &amp; D, India</span>
+                        <strong>Dr. M. RajaSekar</strong>
+                        <span>
+                          Professor, Department of CSE(DataScience), VNR Vignana Jyothi
+                          Institute of Engineering & Technology, Hyderabad, Telangana
+                        </span>
                       </div>
                     </div>
+
                     <div className="assic-home-media-item">
-                      <img src={kfs} alt="Speaker" />
+                      <img src={dre} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Prof. (Dr.) Khaled Fouad Sayed</strong>
-                        <span></span>
+                        <strong>Dr. Damodar Reddy Edla</strong>
+                        <span>
+                          Associate Professor, Department of Computer Science and Engineering,
+                          National Institute of Technology, Goa
+                        </span>
                       </div>
                     </div>
+
                     <div className="assic-home-media-item">
-                      <img src={tg} alt="Speaker" />
+                      <img src={smt} alt="Speaker" />
                       <div className="assic-home-media-caption">
-                        <strong>Tarek Gaber</strong>
-                        <span></span>
+                        <strong>Dr. Sabu M. Thampi</strong>
+                        <span>
+                          Professor, School of Computer Science & Engineering (SoCSE), On
+                          sabbatical (2026) Coordinator, Connected Systems & Intelligence Lab
+                        </span>
                       </div>
                     </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={ckm} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>C Krishna Mohan</strong>
+                        <span>
+                          Professor (HAG), Department of Computer Science and Engineering,
+                          Former Dean of Public and Corporate Relations, Indian Institute of
+                          Technology, Hyderabad
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="assic-home-media-item">
+                      <img src={rp} alt="Speaker" />
+                      <div className="assic-home-media-caption">
+                        <strong>Prof. R Padmavathy</strong>
+                        <span>
+                          Professor Department of Computer Science and Engineering Information
+                          NIT Warangal
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -234,7 +330,7 @@ function Home() {
               <div className="assic-home-welcome-panel">
                 <div className="assic-home-welcome-badge">Welcome</div>
                 <p>
-                  <strong>International Conference on Advancements in Smart, Secure and Intelligent Computing (ICASSIC)</strong> <br /> aims to highlight recent development research works in Information and Communication Technologies so as to create intelligent systems driven by automation capabilities thereby addressing prevailing concerns faced by humanity. It aims to integrate the capabilities of computer units, social media, security methods and communication networks together with smart devices, internet technologies, big data analytics, computational intelligence and intelligent systems to realize various innovative applications. ASSIC can provide a platform in not only designing smart computing systems but also in incorporating machine intelligence based hi-tech system models with advanced security measures. It provides a premier interdisciplinary platform for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in modern technologies like Internet-of-Things, edge computing, cloud computing, secure intelligent frameworks and ubiquitous computing.
+                  <strong>International Conference on Advancements in Smart, Secure and Intelligent Computing (ICASSIC)</strong> <br /> aims to highlight recent development research works in Information and Communication Technologies so as to create intelligent systems driven by automation capabilities thereby addressing prevailing concerns faced by humanity. It aims to integrate the capabilities of computer units, social media, security methods and communication networks together with smart devices, internet technologies, big data analytics, computational intelligence and intelligent systems to realize various innovative applications. ICASSIC can provide a platform in not only designing smart computing systems but also in incorporating machine intelligence based hi-tech system models with advanced security measures. It provides a premier interdisciplinary platform for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in modern technologies like Internet-of-Things, edge computing, cloud computing, secure intelligent frameworks and ubiquitous computing.
                 </p>
               </div>
 
