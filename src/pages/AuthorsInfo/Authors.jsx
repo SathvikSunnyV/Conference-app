@@ -49,7 +49,7 @@ function Authors() {
           <h3>Submission Policies</h3>
 
           <p>
-            The authors of ASSIC 2026 should pay attention to the following:
+            The authors of ICASSIC 2026 should pay attention to the following:
           </p>
         </AnimatedSection>
 
@@ -121,7 +121,7 @@ function Authors() {
 
           <p>
             At least one of the authors listed on the paper must register for the
-            ASSIC 2026 to upload the final manuscript.
+            ICASSIC 2026 to upload the final manuscript.
           </p>
 
           <p>
