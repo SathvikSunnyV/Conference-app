@@ -17,7 +17,7 @@ function Footer() {
 
       <p className="footer-text">
         2026 International Conference on Advance Smart, Secure and Intelligent Computing |
-        Designed by <span className="highlight"> Sathvik V, student at MLRIT </span> |
+        Designed by <span className="highlight"> Mrs. P. Pavani, Assistant professor at MLRIT & Sathvik V, Student at MLRIT </span> |
         © Copyright All rights reserved
       </p>
 
